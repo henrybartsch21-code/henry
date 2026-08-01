@@ -3,47 +3,45 @@
 @import "@fontsource-variable/bricolage-grotesque";
 
 /* ------------------------------------------------------------------------
-   SiteCraft Design Tokens
+   SiteCraft Design Tokens — helles Luxus-Theme (v2)
    Siehe DESIGN-STRATEGY.md, Abschnitt 2 (Visuelles Konzept) für Begründung.
    ------------------------------------------------------------------------ */
 :root {
-  --ink-950: #0a0a0b;
-  --ink-900: #111113;
-  --ink-800: #19191c;
-  --ink-700: #242427;
-  --ink-600: #313135;
+  --surface-0: #ffffff;
+  --surface-50: #faf7f1;
+  --surface-100: #f2ead9;
+  --surface-200: #e8dcc3;
 
-  --paper-50: #faf9f6;
-  --paper-100: #f2f0ea;
+  --line-200: #e4dbc9;
+  --line-300: #d8cbae;
 
-  --bone-100: #f4f2ee;
-  --bone-200: #e8e6e1;
-  --bone-400: #a8a6a0;
-  --bone-600: #6f6d68;
+  --ink-900: #1e1a14;
+  --ink-700: #42392c;
+  --ink-500: #7a6e5b;
+  --ink-400: #9c917d;
 
-  --ember-300: #e3a768;
+  --ember-100: #f3dcc0;
   --ember-500: #c9752f;
-  --ember-600: #a85f22;
+  --ember-600: #9c5a24;
 
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-ink-950: var(--ink-950);
+  --color-surface-0: var(--surface-0);
+  --color-surface-50: var(--surface-50);
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+
+  --color-line-200: var(--line-200);
+  --color-line-300: var(--line-300);
+
   --color-ink-900: var(--ink-900);
-  --color-ink-800: var(--ink-800);
   --color-ink-700: var(--ink-700);
-  --color-ink-600: var(--ink-600);
+  --color-ink-500: var(--ink-500);
+  --color-ink-400: var(--ink-400);
 
-  --color-paper-50: var(--paper-50);
-  --color-paper-100: var(--paper-100);
-
-  --color-bone-100: var(--bone-100);
-  --color-bone-200: var(--bone-200);
-  --color-bone-400: var(--bone-400);
-  --color-bone-600: var(--bone-600);
-
-  --color-ember-300: var(--ember-300);
+  --color-ember-100: var(--ember-100);
   --color-ember-500: var(--ember-500);
   --color-ember-600: var(--ember-600);
 
@@ -54,8 +52,8 @@
 }
 
 html {
-  background: var(--ink-950);
-  color-scheme: dark;
+  background: var(--surface-0);
+  color-scheme: light;
 }
 
 section[id] {
@@ -63,16 +61,16 @@ section[id] {
 }
 
 body {
-  background: var(--ink-950);
-  color: var(--bone-200);
+  background: var(--surface-0);
+  color: var(--ink-700);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: var(--ember-500);
-  color: var(--ink-950);
+  background: var(--ember-100);
+  color: var(--ink-900);
 }
 
 h1, h2, h3, h4, .font-display {
@@ -86,12 +84,12 @@ h1, h2, h3, h4, .font-display {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--ink-950);
+  background: var(--surface-50);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--ink-700);
+  background: var(--line-300);
   border-radius: 999px;
-  border: 2px solid var(--ink-950);
+  border: 2px solid var(--surface-50);
 }
 
 @media (min-width: 1024px) {

@@ -14,13 +14,13 @@ const ANSWERS = [
 
 export function ProblemSolution() {
   return (
-    <section className="relative bg-ink-950 py-32 lg:py-44">
+    <section className="relative bg-surface-50 py-32 lg:py-44">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <Reveal>
-          <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-ember-400">
+          <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-ember-600">
             Der Ausgangspunkt
           </p>
-          <h2 className="max-w-3xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-bone-100">
+          <h2 className="max-w-3xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-ink-900">
             Ihr Geschäft ist exzellent. Ihre Website behauptet das Gegenteil.
           </h2>
         </Reveal>
@@ -28,14 +28,14 @@ export function ProblemSolution() {
         <div className="mt-20 grid gap-16 lg:grid-cols-2 lg:gap-24">
           <div>
             <Reveal>
-              <h3 className="font-display text-sm font-semibold uppercase tracking-[0.1em] text-bone-600">
+              <h3 className="font-display text-sm font-semibold uppercase tracking-[0.1em] text-ink-400">
                 01 — Was wir immer wieder sehen
               </h3>
             </Reveal>
-            <ul className="mt-8 space-y-8 border-t border-ink-700/60">
+            <ul className="mt-8 space-y-8 border-t border-line-300">
               {PROBLEMS.map((text, i) => (
                 <Reveal key={text} delay={i * 0.08}>
-                  <li className="border-b border-ink-700/60 pb-8 pt-8 text-lg leading-relaxed text-bone-400">
+                  <li className="border-b border-line-300 pb-8 pt-8 text-lg leading-relaxed text-ink-500">
                     {text}
                   </li>
                 </Reveal>
@@ -45,14 +45,14 @@ export function ProblemSolution() {
 
           <div>
             <Reveal>
-              <h3 className="font-display text-sm font-semibold uppercase tracking-[0.1em] text-ember-400">
+              <h3 className="font-display text-sm font-semibold uppercase tracking-[0.1em] text-ember-600">
                 02 — Was SiteCraft anders macht
               </h3>
             </Reveal>
-            <ul className="mt-8 space-y-8 border-t border-ink-700/60">
+            <ul className="mt-8 space-y-8 border-t border-line-300">
               {ANSWERS.map((text, i) => (
                 <Reveal key={text} delay={i * 0.08}>
-                  <li className="border-b border-ink-700/60 pb-8 pt-8 text-lg leading-relaxed text-bone-100">
+                  <li className="border-b border-line-300 pb-8 pt-8 text-lg leading-relaxed text-ink-900">
                     {text}
                   </li>
                 </Reveal>

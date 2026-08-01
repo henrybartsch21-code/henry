@@ -32,19 +32,19 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section id="process" className="relative bg-ink-950 py-32 lg:py-44">
+    <section id="process" className="relative bg-surface-50 py-32 lg:py-44">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <Reveal>
-          <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-ember-400">
+          <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-ember-600">
             Prozess
           </p>
-          <h2 className="max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-bone-100">
+          <h2 className="max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-ink-900">
             Ein Ablauf, der Überraschungen ausschließt.
           </h2>
         </Reveal>
 
         <div className="relative mt-24">
-          <div className="absolute left-0 right-0 top-6 hidden h-px bg-ink-700 lg:block" />
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-line-300 lg:block" />
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -57,13 +57,13 @@ export function Process() {
           <RevealGroup className="grid gap-12 lg:grid-cols-4 lg:gap-8">
             {STEPS.map((step) => (
               <motion.div variants={revealItem} key={step.number} className="relative">
-                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-ink-700 bg-ink-950 font-display text-sm font-semibold text-ember-400 lg:h-12 lg:w-12">
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-line-300 bg-surface-50 font-display text-sm font-semibold text-ember-600 lg:h-12 lg:w-12">
                   {step.number}
                 </div>
-                <h3 className="mt-6 font-display text-xl font-semibold tracking-tight text-bone-100">
+                <h3 className="mt-6 font-display text-xl font-semibold tracking-tight text-ink-900">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-bone-400">
+                <p className="mt-3 text-[15px] leading-relaxed text-ink-500">
                   {step.description}
                 </p>
               </motion.div>

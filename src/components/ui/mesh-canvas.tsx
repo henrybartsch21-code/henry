@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 type Point3D = { x: number; y: number; z: number };
 
 /**
- * Generative Drahtgitter-Mesh — Ersatz für Video 1 ("Continuum", siehe
+ * Generative Drahtgitter-Mesh — Ersatz für Video 1 ("Daylight", siehe
  * DESIGN-STRATEGY.md Abschnitt 4). Ein sich langsam drehender Punkt-Cluster,
  * dessen nächste Nachbarn verbunden werden, projiziert mit einfacher
  * Perspektive. Läuft auf 2D-Canvas, kein WebGL-Dependency nötig.
@@ -119,8 +119,8 @@ export function MeshCanvas({ className }: { className?: string }) {
             const opacity = Math.max(0, (avgZ + 1) / 2) * 0.5;
             const isAccent = (i * 7 + j) % 37 === 0;
             ctx!.strokeStyle = isAccent
-              ? `rgba(201, 117, 47, ${opacity * 1.4})`
-              : `rgba(168, 166, 160, ${opacity * 0.5})`;
+              ? `rgba(156, 90, 36, ${opacity * 1.4})`
+              : `rgba(154, 140, 116, ${opacity * 0.7})`;
             ctx!.lineWidth = 0.6;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
@@ -136,8 +136,8 @@ export function MeshCanvas({ className }: { className?: string }) {
         const isAccent = i % 17 === 0;
         const r = isAccent ? 2.2 : 1.3;
         ctx!.fillStyle = isAccent
-          ? `rgba(227, 167, 104, ${opacity})`
-          : `rgba(232, 230, 225, ${opacity * 0.7})`;
+          ? `rgba(156, 90, 36, ${opacity})`
+          : `rgba(122, 110, 91, ${opacity * 0.6})`;
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, r * p.perspective, 0, Math.PI * 2);
         ctx!.fill();

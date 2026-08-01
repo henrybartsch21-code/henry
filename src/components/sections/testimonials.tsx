@@ -13,29 +13,35 @@ const QUOTES = [
     name: "Julian Verse",
     role: "Gründer, Velis Architecture",
   },
+  {
+    quote:
+      "Unsere Forschung ist komplex. Die alte Website hat das mit noch mehr Komplexität beantwortet. SiteCraft hat sie lesbar gemacht, ohne sie zu vereinfachen — genau die Balance, die wir bei drei anderen Studios vermisst haben.",
+    name: "Dr. Nadine Oskar",
+    role: "Head of Communications, Aurel Biotech",
+  },
 ];
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="relative bg-ink-900 py-32 lg:py-44">
+    <section id="testimonials" className="relative bg-surface-0 py-32 lg:py-44">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        <div className="grid gap-20 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-16 lg:grid-cols-3 lg:gap-12">
           {QUOTES.map((item, i) => (
             <Reveal key={item.name} delay={i * 0.1}>
               <div className="flex h-full flex-col">
                 <span className="font-display text-5xl leading-none text-ember-500/40">
                   &ldquo;
                 </span>
-                <p className="mt-4 font-display text-2xl font-medium leading-[1.35] tracking-tight text-bone-100 lg:text-[1.7rem]">
+                <p className="mt-4 font-display text-xl font-medium leading-[1.4] tracking-tight text-ink-900 lg:text-[1.35rem]">
                   {item.quote}
                 </p>
                 <div className="mt-8 flex items-center gap-4">
-                  <div className="h-10 w-10 rounded-full border border-ink-700 bg-ink-800" />
+                  <div className="h-10 w-10 rounded-full border border-line-300 bg-surface-100" />
                   <div>
-                    <div className="text-sm font-semibold text-bone-100">
+                    <div className="text-sm font-semibold text-ink-900">
                       {item.name}
                     </div>
-                    <div className="text-xs text-bone-600">{item.role}</div>
+                    <div className="text-xs text-ink-400">{item.role}</div>
                   </div>
                 </div>
               </div>

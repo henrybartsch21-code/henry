@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { CustomCursor } from "@/components/ui/custom-cursor";
@@ -39,6 +39,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="h-full scroll-smooth antialiased">
-      <body className="min-h-full bg-ink-950 text-bone-200">
+      <body className="min-h-full bg-surface-0 text-ink-700">
         <SmoothScroll />
         <CustomCursor />
         <GrainOverlay />
