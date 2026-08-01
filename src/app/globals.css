@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/bricolage-grotesque";
+
+/* ------------------------------------------------------------------------
+   SiteCraft Design Tokens — helles Luxus-Theme (v2)
+   Siehe DESIGN-STRATEGY.md, Abschnitt 2 (Visuelles Konzept) für Begründung.
+   ------------------------------------------------------------------------ */
+:root {
+  --surface-0: #ffffff;
+  --surface-50: #faf7f1;
+  --surface-100: #f2ead9;
+  --surface-200: #e8dcc3;
+
+  --line-200: #e4dbc9;
+  --line-300: #d8cbae;
+
+  --ink-900: #1e1a14;
+  --ink-700: #42392c;
+  --ink-500: #7a6e5b;
+  --ink-400: #9c917d;
+
+  --ember-100: #f3dcc0;
+  --ember-500: #c9752f;
+  --ember-600: #9c5a24;
+
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --color-surface-0: var(--surface-0);
+  --color-surface-50: var(--surface-50);
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+
+  --color-line-200: var(--line-200);
+  --color-line-300: var(--line-300);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-ink-400: var(--ink-400);
+
+  --color-ember-100: var(--ember-100);
+  --color-ember-500: var(--ember-500);
+  --color-ember-600: var(--ember-600);
+
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+html {
+  background: var(--surface-0);
+  color-scheme: light;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+body {
+  background: var(--surface-0);
+  color: var(--ink-700);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--ember-100);
+  color: var(--ink-900);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+/* Custom scrollbar — subtle, not the browser default */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-300);
+  border-radius: 999px;
+  border: 2px solid var(--surface-50);
+}
+
+@media (min-width: 1024px) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
