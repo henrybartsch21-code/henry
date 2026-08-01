@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource/parisienne";
+
+/* ------------------------------------------------------------------------
+   Bergkristall Design Tokens — alpines Luxus-Theme
+   Reines Weiß, dunkles Schiefer-Navy für Chrome-Flächen, warmes Creme,
+   gedämpftes Salbeigrün als Skript-Akzent, Gold als CTA-Akzent.
+   ------------------------------------------------------------------------ */
+:root {
+  --pine-950: #11151c;
+  --pine-900: #1a212b;
+  --pine-800: #232b38;
+  --pine-700: #2f3949;
+  --pine-500: #4c5872;
+
+  --cream-50: #fbf8f1;
+  --cream-100: #f4eee0;
+  --cream-200: #ebe1c9;
+  --stone-300: #dcd0b3;
+
+  --line-200: #e3d9c2;
+  --line-300: #d3c4a0;
+  --line-dark: rgba(244, 238, 224, 0.14);
+
+  --ink-900: #191710;
+  --ink-700: #423e30;
+  --ink-500: #756c56;
+  --ink-400: #a89d80;
+
+  --gold-300: #d9bd82;
+  --gold-500: #b5904f;
+  --gold-600: #8f6f38;
+
+  --sage-300: #aec4ae;
+  --sage-500: #7c9a82;
+  --sage-600: #5c7864;
+
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --color-pine-950: var(--pine-950);
+  --color-pine-900: var(--pine-900);
+  --color-pine-800: var(--pine-800);
+  --color-pine-700: var(--pine-700);
+  --color-pine-500: var(--pine-500);
+
+  --color-cream-50: var(--cream-50);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+  --color-stone-300: var(--stone-300);
+
+  --color-line-200: var(--line-200);
+  --color-line-300: var(--line-300);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-ink-400: var(--ink-400);
+
+  --color-gold-300: var(--gold-300);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+
+  --color-sage-300: var(--sage-300);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+
+  --font-display: "Fraunces Variable", ui-serif, Georgia, serif;
+  --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Parisienne", cursive;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-snow: snow 14s linear infinite;
+}
+
+html {
+  background: var(--cream-50);
+  color-scheme: light;
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+body {
+  background: var(--cream-50);
+  color: var(--ink-700);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--gold-300);
+  color: var(--ink-900);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+.font-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-300);
+  border-radius: 999px;
+  border: 2px solid var(--cream-100);
+}
+
+@media (min-width: 1024px) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes snow {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 300px 800px, -200px 600px, 150px 1000px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
