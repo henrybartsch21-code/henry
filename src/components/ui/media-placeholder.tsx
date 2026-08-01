@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import type { RoomTone } from "@/lib/hotel-data";
 
 const GRADIENTS: Record<RoomTone, string> = {
-  pine: "linear-gradient(155deg, #24402c 0%, #142a1d 55%, #0d1811 100%)",
+  pine: "linear-gradient(155deg, #2f3949 0%, #1a212b 55%, #11151c 100%)",
   gold: "linear-gradient(155deg, #cfa863 0%, #a9803f 55%, #6f5527 100%)",
   stone: "linear-gradient(155deg, #d7c9a6 0%, #b7a37b 55%, #7c6c4c 100%)",
   mist: "linear-gradient(155deg, #eef1e9 0%, #cdd6c4 55%, #8fa08a 100%)",

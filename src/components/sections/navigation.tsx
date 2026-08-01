@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Magnetic } from "@/components/ui/magnetic";
 import { useLanguage } from "@/lib/i18n";
+import { useMobileMenu } from "@/lib/mobile-menu";
 
 const LINKS = [
   { href: "/", key: "home" as const },
@@ -19,7 +20,7 @@ const LINKS = [
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const { open, setOpen, toggle } = useMobileMenu();
   const [prevPathname, setPrevPathname] = useState<string | null>(null);
   const pathname = usePathname();
   const { lang, setLang, t } = useLanguage();
@@ -114,7 +115,7 @@ export function Navigation() {
             </Magnetic>
 
             <button
-              onClick={() => setOpen((o) => !o)}
+              onClick={toggle}
               className="flex flex-col gap-1.5 xl:hidden"
               aria-label={open ? t("nav", "close") : t("nav", "menu")}
               aria-expanded={open}

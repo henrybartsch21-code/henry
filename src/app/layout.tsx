@@ -6,7 +6,9 @@ import { GrainOverlay } from "@/components/ui/grain-overlay";
 import { Preloader } from "@/components/ui/preloader";
 import { Navigation } from "@/components/sections/navigation";
 import { Footer } from "@/components/sections/footer";
+import { MobileActionBar } from "@/components/ui/mobile-action-bar";
 import { LanguageProvider } from "@/lib/i18n";
+import { MobileMenuProvider } from "@/lib/mobile-menu";
 
 const siteUrl = "https://bergkristall-hotel.at";
 
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#142a1d",
+  themeColor: "#1a212b",
 };
 
 export default function RootLayout({
@@ -54,15 +56,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="h-full scroll-smooth antialiased">
-      <body className="min-h-full bg-cream-50 text-ink-700">
+      <body className="min-h-full bg-cream-50 pb-16 text-ink-700 xl:pb-0">
         <LanguageProvider>
-          <Preloader />
-          <SmoothScroll />
-          <CustomCursor />
-          <GrainOverlay />
-          <Navigation />
-          {children}
-          <Footer />
+          <MobileMenuProvider>
+            <Preloader />
+            <SmoothScroll />
+            <CustomCursor />
+            <GrainOverlay />
+            <Navigation />
+            {children}
+            <Footer />
+            <MobileActionBar />
+          </MobileMenuProvider>
         </LanguageProvider>
       </body>
     </html>

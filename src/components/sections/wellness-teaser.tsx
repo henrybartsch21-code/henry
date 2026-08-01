@@ -34,7 +34,7 @@ export function WellnessTeaser() {
               Wellness & Spa
             </p>
             <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] text-cream-50">
-              Baden zwischen Wolken und Gipfeln.
+              Baden zwischen <span className="font-script text-sage-300 text-[1.2em]">Wolken</span> und Gipfeln.
             </h2>
             <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-cream-100/80">
               Unser Panorama-Spa öffnet sich zur Gipfelkette — drinnen wie

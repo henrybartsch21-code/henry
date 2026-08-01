@@ -39,13 +39,13 @@ export function Hero() {
         >
           {lang === "de" ? (
             <>
-              Wo die Luft <span className="font-display-italic text-gold-300">klarer</span> und
-              die Zeit <span className="font-display-italic text-gold-300">langsamer</span> wird.
+              Wo die Luft <span className="font-script text-sage-300 text-[1.15em]">klarer</span> und
+              die Zeit <span className="font-script text-sage-300 text-[1.15em]">langsamer</span> wird.
             </>
           ) : (
             <>
-              Where the air runs <span className="font-display-italic text-gold-300">clearer</span> and
-              time runs <span className="font-display-italic text-gold-300">slower</span>.
+              Where the air runs <span className="font-script text-sage-300 text-[1.15em]">clearer</span> and
+              time runs <span className="font-script text-sage-300 text-[1.15em]">slower</span>.
             </>
           )}
         </motion.h1>

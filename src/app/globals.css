@@ -1,17 +1,19 @@
 @import "tailwindcss";
 @import "@fontsource-variable/inter";
 @import "@fontsource-variable/fraunces";
+@import "@fontsource/parisienne";
 
 /* ------------------------------------------------------------------------
    Bergkristall Design Tokens — alpines Luxus-Theme
-   Tiefes Tannengrün, warmes Creme, gedämpftes Antik-Gold.
+   Reines Weiß, dunkles Schiefer-Navy für Chrome-Flächen, warmes Creme,
+   gedämpftes Salbeigrün als Skript-Akzent, Gold als CTA-Akzent.
    ------------------------------------------------------------------------ */
 :root {
-  --pine-950: #0d1811;
-  --pine-900: #142a1d;
-  --pine-800: #1c3a27;
-  --pine-700: #274d34;
-  --pine-500: #3f6a4c;
+  --pine-950: #11151c;
+  --pine-900: #1a212b;
+  --pine-800: #232b38;
+  --pine-700: #2f3949;
+  --pine-500: #4c5872;
 
   --cream-50: #fbf8f1;
   --cream-100: #f4eee0;
@@ -30,6 +32,10 @@
   --gold-300: #d9bd82;
   --gold-500: #b5904f;
   --gold-600: #8f6f38;
+
+  --sage-300: #aec4ae;
+  --sage-500: #7c9a82;
+  --sage-600: #5c7864;
 
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -58,8 +64,13 @@
   --color-gold-500: var(--gold-500);
   --color-gold-600: var(--gold-600);
 
+  --color-sage-300: var(--sage-300);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+
   --font-display: "Fraunces Variable", ui-serif, Georgia, serif;
   --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Parisienne", cursive;
 
   --animate-marquee: marquee 40s linear infinite;
   --animate-snow: snow 14s linear infinite;
@@ -97,6 +108,12 @@ h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
+}
+
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 ::-webkit-scrollbar {

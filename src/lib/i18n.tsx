@@ -14,6 +14,7 @@ const dictionary = {
     offers: { de: "Angebote", en: "Offers" },
     contact: { de: "Kontakt", en: "Contact" },
     bookNow: { de: "Verfügbarkeit prüfen", en: "Check availability" },
+    book: { de: "Buchen", en: "Book" },
     menu: { de: "Menü", en: "Menu" },
     close: { de: "Schließen", en: "Close" },
   },

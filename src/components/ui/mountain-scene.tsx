@@ -67,8 +67,8 @@ export function MountainScene({ className }: { className?: string }) {
 
       const sky = ctx!.createLinearGradient(0, 0, 0, height);
       sky.addColorStop(0, "#f4ead3");
-      sky.addColorStop(0.45, "#e9d3a8");
-      sky.addColorStop(1, "#1c3a27");
+      sky.addColorStop(0.45, "#e9b98f");
+      sky.addColorStop(1, "#1a212b");
       ctx!.fillStyle = sky;
       ctx!.fillRect(0, 0, width, height);
 
@@ -87,9 +87,9 @@ export function MountainScene({ className }: { className?: string }) {
 
       const layers = [
         { y: height * 0.42, jagged: height * 0.16, color: "rgba(158, 138, 110, 0.55)", seed: 3.1, drift: 6 },
-        { y: height * 0.55, jagged: height * 0.2, color: "rgba(90, 92, 68, 0.7)", seed: 7.7, drift: 10 },
-        { y: height * 0.68, jagged: height * 0.22, color: "rgba(28, 58, 39, 0.92)", seed: 14.2, drift: 16 },
-        { y: height * 0.8, jagged: height * 0.18, color: "#142a1d", seed: 21.5, drift: 22 },
+        { y: height * 0.55, jagged: height * 0.2, color: "rgba(72, 80, 98, 0.7)", seed: 7.7, drift: 10 },
+        { y: height * 0.68, jagged: height * 0.22, color: "rgba(26, 33, 43, 0.92)", seed: 14.2, drift: 16 },
+        { y: height * 0.8, jagged: height * 0.18, color: "#11151c", seed: 21.5, drift: 22 },
       ];
 
       layers.forEach((layer) => {
