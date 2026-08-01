@@ -1,52 +1,79 @@
-import { Reveal } from "@/components/ui/reveal";
+"use client";
 
-const QUOTES = [
-  {
-    quote:
-      "Wir haben drei Agenturen vorher briefen lassen. Alle drei kamen mit demselben Vorschlag zurück — nur mit anderen Farben. SiteCraft hat als Erste gefragt, warum unsere Investoren uns überhaupt vertrauen, bevor ein einziges Wireframe entstand.",
-    name: "Corinna Ahlgren",
-    role: "Head of Marketing, Nordlicht Capital",
-  },
-  {
-    quote:
-      "Was mich überzeugt hat, war nicht das finale Design — das kam sowieso. Es war, dass jede Entscheidung begründet wurde. Keine Geschmacksfrage, sondern Argumentation. Das gibt es selten in dieser Branche.",
-    name: "Julian Verse",
-    role: "Gründer, Velis Architecture",
-  },
-  {
-    quote:
-      "Unsere Forschung ist komplex. Die alte Website hat das mit noch mehr Komplexität beantwortet. SiteCraft hat sie lesbar gemacht, ohne sie zu vereinfachen — genau die Balance, die wir bei drei anderen Studios vermisst haben.",
-    name: "Dr. Nadine Oskar",
-    role: "Head of Communications, Aurel Biotech",
-  },
-];
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Reveal } from "@/components/ui/reveal";
+import { testimonials } from "@/lib/hotel-data";
+
+const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const current = testimonials[index];
+
+  function go(dir: 1 | -1) {
+    setIndex((i) => (i + dir + testimonials.length) % testimonials.length);
+  }
+
   return (
-    <section id="testimonials" className="relative bg-surface-0 py-32 lg:py-44">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-        <div className="grid gap-16 lg:grid-cols-3 lg:gap-12">
-          {QUOTES.map((item, i) => (
-            <Reveal key={item.name} delay={i * 0.1}>
-              <div className="flex h-full flex-col">
-                <span className="font-display text-5xl leading-none text-ember-500/40">
-                  &ldquo;
-                </span>
-                <p className="mt-4 font-display text-xl font-medium leading-[1.4] tracking-tight text-ink-900 lg:text-[1.35rem]">
-                  {item.quote}
-                </p>
-                <div className="mt-8 flex items-center gap-4">
-                  <div className="h-10 w-10 rounded-full border border-line-300 bg-surface-100" />
-                  <div>
-                    <div className="text-sm font-semibold text-ink-900">
-                      {item.name}
-                    </div>
-                    <div className="text-xs text-ink-400">{item.role}</div>
-                  </div>
-                </div>
+    <section id="stimmen" className="relative bg-cream-100 py-28 lg:py-40">
+      <div className="mx-auto max-w-[900px] px-6 text-center lg:px-12">
+        <Reveal>
+          <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-gold-600">
+            Was Gäste sagen
+          </p>
+        </Reveal>
+
+        <div className="relative min-h-[280px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current.name}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.6, ease: EASE }}
+            >
+              <div className="mb-4 text-gold-500" aria-hidden="true">
+                {"★".repeat(current.rating)}
               </div>
-            </Reveal>
-          ))}
+              <p className="font-display text-xl leading-[1.4] text-ink-900 lg:text-2xl">
+                &ldquo;{current.quote}&rdquo;
+              </p>
+              <div className="mt-8">
+                <div className="text-sm font-semibold text-ink-900">{current.name}</div>
+                <div className="text-xs text-ink-400">{current.origin}</div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="mt-10 flex items-center justify-center gap-6">
+          <button
+            onClick={() => go(-1)}
+            data-cursor="link"
+            aria-label="Vorherige Bewertung"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line-300 text-ink-500 transition-colors hover:border-gold-500 hover:text-gold-600"
+          >
+            ‹
+          </button>
+          <div className="flex gap-2">
+            {testimonials.map((item, i) => (
+              <button
+                key={item.name}
+                onClick={() => setIndex(i)}
+                aria-label={`Bewertung ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-6 bg-gold-500" : "w-1.5 bg-line-300"}`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={() => go(1)}
+            data-cursor="link"
+            aria-label="Nächste Bewertung"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line-300 text-ink-500 transition-colors hover:border-gold-500 hover:text-gold-600"
+          >
+            ›
+          </button>
         </div>
       </div>
     </section>

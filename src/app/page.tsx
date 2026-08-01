@@ -1,31 +1,29 @@
-import { Navigation } from "@/components/sections/navigation";
 import { Hero } from "@/components/sections/hero";
-import { TrustBar } from "@/components/sections/trust-bar";
-import { ProblemSolution } from "@/components/sections/problem-solution";
-import { Services } from "@/components/sections/services";
-import { Process } from "@/components/sections/process";
-import { CaseStudies } from "@/components/sections/case-studies";
-import { Gallery } from "@/components/sections/gallery";
-import { Testimonials } from "@/components/sections/testimonials";
+import { AwardsBar } from "@/components/sections/awards-bar";
 import { About } from "@/components/sections/about";
+import { RoomsTeaser } from "@/components/sections/rooms-teaser";
+import { WellnessTeaser } from "@/components/sections/wellness-teaser";
+import { CulinaryTeaser } from "@/components/sections/culinary-teaser";
+import { OffersTeaser } from "@/components/sections/offers-teaser";
+import { Testimonials } from "@/components/sections/testimonials";
+import { Gallery } from "@/components/sections/gallery";
 import { FAQ } from "@/components/sections/faq";
 import { CTASection } from "@/components/sections/cta-section";
-import { Footer } from "@/components/sections/footer";
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "SiteCraft",
+  "@type": "Hotel",
+  name: "Hotel Bergkristall",
   description:
-    "Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development.",
-  url: "https://sitecraft.agency",
-  areaServed: "DE",
+    "Familiengeführtes 5-Sterne-Refugium in den Salzburger Alpen mit Panorama-Spa, Gourmetküche und Zimmern voller Zirbenholz und Weitblick.",
+  url: "https://bergkristall-hotel.at",
+  starRating: { "@type": "Rating", ratingValue: "5" },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Torstraße 42",
-    postalCode: "10119",
-    addressLocality: "Berlin",
-    addressCountry: "DE",
+    streetAddress: "Hochtalweg 12",
+    postalCode: "5620",
+    addressLocality: "Hochwiesen",
+    addressCountry: "AT",
   },
 };
 
@@ -36,21 +34,19 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navigation />
       <main>
         <Hero />
-        <TrustBar />
-        <ProblemSolution />
-        <Services />
-        <Process />
-        <CaseStudies />
-        <Gallery />
-        <Testimonials />
+        <AwardsBar />
         <About />
+        <RoomsTeaser />
+        <WellnessTeaser />
+        <CulinaryTeaser />
+        <OffersTeaser />
+        <Testimonials />
+        <Gallery />
         <FAQ />
         <CTASection />
       </main>
-      <Footer />
     </>
   );
 }

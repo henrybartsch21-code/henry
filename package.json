@@ -1,5 +1,5 @@
 {
-  "name": "henry",
+  "name": "bergkristall",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.2.7",
     "@fontsource-variable/inter": "^5.3.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.43.0",

@@ -3,44 +3,48 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { GrainOverlay } from "@/components/ui/grain-overlay";
+import { Preloader } from "@/components/ui/preloader";
+import { Navigation } from "@/components/sections/navigation";
+import { Footer } from "@/components/sections/footer";
+import { LanguageProvider } from "@/lib/i18n";
 
-const siteUrl = "https://sitecraft.agency";
+const siteUrl = "https://bergkristall-hotel.at";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SiteCraft — Digitale Flaggschiffe für Marken mit Anspruch",
-    template: "%s — SiteCraft",
+    default: "Bergkristall — Alpines Refugium in den Salzburger Alpen",
+    template: "%s — Hotel Bergkristall",
   },
   description:
-    "SiteCraft ist eine Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development. Wir bauen keine Websites, die existieren — sondern welche, die verkaufen.",
+    "Hotel Bergkristall: ein familiengeführtes 5-Sterne-Refugium in den Salzburger Alpen mit Panorama-Spa, Gourmetküche und Zimmern voller Zirbenholz und Weitblick. Seit 1962.",
   keywords: [
-    "Premium Digitalagentur",
-    "Webdesign Agentur",
-    "UX UI Design",
-    "Markenidentität",
-    "Web Development",
+    "Alpenhotel",
+    "Wellnesshotel Salzburger Land",
+    "5 Sterne Hotel Alpen",
+    "Chalet Suite",
+    "Skiurlaub Hotel",
   ],
   openGraph: {
     type: "website",
-    locale: "de_DE",
+    locale: "de_AT",
     url: siteUrl,
-    siteName: "SiteCraft",
-    title: "SiteCraft — Digitale Flaggschiffe für Marken mit Anspruch",
+    siteName: "Hotel Bergkristall",
+    title: "Bergkristall — Alpines Refugium in den Salzburger Alpen",
     description:
-      "Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development.",
+      "Ein familiengeführtes 5-Sterne-Refugium in den Salzburger Alpen mit Panorama-Spa, Gourmetküche und Zimmern voller Zirbenholz und Weitblick.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SiteCraft — Digitale Flaggschiffe für Marken mit Anspruch",
+    title: "Bergkristall — Alpines Refugium in den Salzburger Alpen",
     description:
-      "Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development.",
+      "Ein familiengeführtes 5-Sterne-Refugium in den Salzburger Alpen mit Panorama-Spa und Gourmetküche.",
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
+  themeColor: "#142a1d",
 };
 
 export default function RootLayout({
@@ -50,11 +54,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="h-full scroll-smooth antialiased">
-      <body className="min-h-full bg-surface-0 text-ink-700">
-        <SmoothScroll />
-        <CustomCursor />
-        <GrainOverlay />
-        {children}
+      <body className="min-h-full bg-cream-50 text-ink-700">
+        <LanguageProvider>
+          <Preloader />
+          <SmoothScroll />
+          <CustomCursor />
+          <GrainOverlay />
+          <Navigation />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

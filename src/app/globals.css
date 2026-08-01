@@ -1,37 +1,50 @@
 @import "tailwindcss";
 @import "@fontsource-variable/inter";
-@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/fraunces";
 
 /* ------------------------------------------------------------------------
-   SiteCraft Design Tokens — helles Luxus-Theme (v2)
-   Siehe DESIGN-STRATEGY.md, Abschnitt 2 (Visuelles Konzept) für Begründung.
+   Bergkristall Design Tokens — alpines Luxus-Theme
+   Tiefes Tannengrün, warmes Creme, gedämpftes Antik-Gold.
    ------------------------------------------------------------------------ */
 :root {
-  --surface-0: #ffffff;
-  --surface-50: #faf7f1;
-  --surface-100: #f2ead9;
-  --surface-200: #e8dcc3;
+  --pine-950: #0d1811;
+  --pine-900: #142a1d;
+  --pine-800: #1c3a27;
+  --pine-700: #274d34;
+  --pine-500: #3f6a4c;
 
-  --line-200: #e4dbc9;
-  --line-300: #d8cbae;
+  --cream-50: #fbf8f1;
+  --cream-100: #f4eee0;
+  --cream-200: #ebe1c9;
+  --stone-300: #dcd0b3;
 
-  --ink-900: #1e1a14;
-  --ink-700: #42392c;
-  --ink-500: #7a6e5b;
-  --ink-400: #9c917d;
+  --line-200: #e3d9c2;
+  --line-300: #d3c4a0;
+  --line-dark: rgba(244, 238, 224, 0.14);
 
-  --ember-100: #f3dcc0;
-  --ember-500: #c9752f;
-  --ember-600: #9c5a24;
+  --ink-900: #191710;
+  --ink-700: #423e30;
+  --ink-500: #756c56;
+  --ink-400: #a89d80;
+
+  --gold-300: #d9bd82;
+  --gold-500: #b5904f;
+  --gold-600: #8f6f38;
 
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-surface-0: var(--surface-0);
-  --color-surface-50: var(--surface-50);
-  --color-surface-100: var(--surface-100);
-  --color-surface-200: var(--surface-200);
+  --color-pine-950: var(--pine-950);
+  --color-pine-900: var(--pine-900);
+  --color-pine-800: var(--pine-800);
+  --color-pine-700: var(--pine-700);
+  --color-pine-500: var(--pine-500);
+
+  --color-cream-50: var(--cream-50);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+  --color-stone-300: var(--stone-300);
 
   --color-line-200: var(--line-200);
   --color-line-300: var(--line-300);
@@ -41,27 +54,28 @@
   --color-ink-500: var(--ink-500);
   --color-ink-400: var(--ink-400);
 
-  --color-ember-100: var(--ember-100);
-  --color-ember-500: var(--ember-500);
-  --color-ember-600: var(--ember-600);
+  --color-gold-300: var(--gold-300);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
 
-  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces Variable", ui-serif, Georgia, serif;
   --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 
-  --animate-marquee: marquee 32s linear infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-snow: snow 14s linear infinite;
 }
 
 html {
-  background: var(--surface-0);
+  background: var(--cream-50);
   color-scheme: light;
 }
 
 section[id] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 6.5rem;
 }
 
 body {
-  background: var(--surface-0);
+  background: var(--cream-50);
   color: var(--ink-700);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -69,27 +83,32 @@ body {
 }
 
 ::selection {
-  background: var(--ember-100);
+  background: var(--gold-300);
   color: var(--ink-900);
 }
 
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
-  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-weight: 500;
 }
 
-/* Custom scrollbar — subtle, not the browser default */
+.font-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--surface-50);
+  background: var(--cream-100);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--line-300);
   border-radius: 999px;
-  border: 2px solid var(--surface-50);
+  border: 2px solid var(--cream-100);
 }
 
 @media (min-width: 1024px) {
@@ -102,6 +121,11 @@ h1, h2, h3, h4, .font-display {
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+@keyframes snow {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 300px 800px, -200px 600px, 150px 1000px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

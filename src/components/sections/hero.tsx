@@ -1,118 +1,102 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MeshCanvas } from "@/components/ui/mesh-canvas";
+import { MountainScene } from "@/components/ui/mountain-scene";
 import { Magnetic } from "@/components/ui/magnetic";
+import { BookingBar } from "@/components/ui/booking-bar";
+import { useLanguage } from "@/lib/i18n";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function Hero() {
+  const { lang } = useLanguage();
+
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-surface-0 pt-28"
+      className="relative flex min-h-[100svh] items-end overflow-hidden bg-pine-900"
     >
-      <MeshCanvas className="pointer-events-none absolute inset-0 h-full w-full opacity-80" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-surface-0/10 via-transparent to-surface-0" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-surface-0 to-transparent" />
+      <MountainScene className="pointer-events-none absolute inset-0 h-full w-full" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-pine-950/85 via-pine-950/10 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-pine-950/50 to-transparent" />
 
-      <div className="relative mx-auto w-full max-w-[1400px] px-6 pb-24 lg:px-12">
+      <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-16 pt-40 lg:px-12 lg:pb-20">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: EASE }}
-          className="mb-8 flex items-center gap-3 text-[13px] font-medium uppercase tracking-[0.18em] text-ink-500"
+          transition={{ duration: 0.8, delay: 1.6, ease: EASE }}
+          className="mb-6 flex items-center gap-3 text-[13px] font-medium uppercase tracking-[0.24em] text-cream-100/85"
         >
-          <span className="h-px w-8 bg-ember-500" />
-          Digitalagentur für Marken mit Anspruch
+          <span className="h-px w-8 bg-gold-300" />
+          {lang === "de" ? "Salzburger Alpen — seit 1962" : "Salzburg Alps — since 1962"}
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: EASE }}
-          className="max-w-4xl text-[clamp(2.75rem,6.5vw,6rem)] font-semibold leading-[0.98] tracking-tight text-ink-900"
+          transition={{ duration: 1.1, delay: 1.75, ease: EASE }}
+          className="max-w-3xl font-display text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.98] text-cream-50"
         >
-          Es gibt einen Unterschied zwischen einer Website, die{" "}
-          <span className="text-ink-400">existiert</span>, und einer, die{" "}
-          <span className="text-ember-600 italic">verkauft</span>.
+          {lang === "de" ? (
+            <>
+              Wo die Luft <span className="font-display-italic text-gold-300">klarer</span> und
+              die Zeit <span className="font-display-italic text-gold-300">langsamer</span> wird.
+            </>
+          ) : (
+            <>
+              Where the air runs <span className="font-display-italic text-gold-300">clearer</span> and
+              time runs <span className="font-display-italic text-gold-300">slower</span>.
+            </>
+          )}
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.5, ease: EASE }}
-          className="mt-8 max-w-xl text-lg leading-relaxed text-ink-500"
+          transition={{ duration: 0.9, delay: 1.95, ease: EASE }}
+          className="mt-7 max-w-lg text-lg leading-relaxed text-cream-100/85"
         >
-          SiteCraft entwirft digitale Flaggschiffe für Unternehmen, deren
-          Qualität online bisher nicht sichtbar war. Kein Template. Keine
-          Abkürzung. Jedes Projekt ein Unikat.
+          {lang === "de"
+            ? "Hotel Bergkristall — ein familiengeführtes Refugium hoch über dem Hochtal, mit Panorama-Spa, Gourmetküche und Zimmern, die nach Zirbenholz duften."
+            : "Hotel Bergkristall — a family-run refuge high above the valley, with a panoramic spa, chef's cuisine and rooms that smell of Swiss pine."}
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.65, ease: EASE }}
-          className="mt-12 flex flex-wrap items-center gap-6"
+          transition={{ duration: 0.9, delay: 2.1, ease: EASE }}
+          className="mt-10 flex flex-wrap items-center gap-6"
         >
           <Magnetic>
             <a
-              href="#cta"
+              href="/zimmer-suiten"
               data-cursor="link"
-              className="group inline-flex items-center gap-3 rounded-full bg-ink-900 px-7 py-4 text-sm font-semibold text-surface-0 transition-colors duration-300 hover:bg-ember-600"
+              className="group inline-flex items-center gap-3 rounded-sm bg-cream-50 px-7 py-4 text-sm font-semibold text-ink-900 transition-colors duration-300 hover:bg-gold-300"
             >
-              Projekt besprechen
+              {lang === "de" ? "Zimmer & Suiten entdecken" : "Discover rooms & suites"}
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
             </a>
           </Magnetic>
-          <a
-            href="#work"
-            data-cursor="link"
-            className="text-sm font-medium text-ink-500 underline decoration-line-300 underline-offset-8 transition-colors duration-300 hover:text-ink-900 hover:decoration-ember-500"
-          >
-            Ausgewählte Arbeiten ansehen
-          </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          className="mt-24 grid max-w-2xl grid-cols-3 gap-8 border-t border-line-200 pt-8"
-        >
-          {[
-            ["48", "Flaggschiff-Projekte"],
-            ["8,4 J.", "Ø Zusammenarbeit"],
-            ["12", "Design-Auszeichnungen"],
-          ].map(([value, label]) => (
-            <div key={label}>
-              <div className="font-display text-2xl font-semibold text-ink-900 lg:text-3xl">
-                {value}
-              </div>
-              <div className="mt-1 text-xs uppercase tracking-[0.08em] text-ink-400">
-                {label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
+        <div className="mt-14 max-w-2xl">
+          <BookingBar />
+        </div>
       </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.4 }}
-        className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 lg:flex"
+        transition={{ duration: 1, delay: 2.4 }}
+        className="absolute right-8 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex"
       >
-        <span className="text-[11px] uppercase tracking-[0.2em] text-ink-400">
-          Scrollen
-        </span>
-        <span className="relative h-12 w-px overflow-hidden bg-line-300">
+        <span className="relative h-16 w-px overflow-hidden bg-cream-50/20">
           <motion.span
             animate={{ y: ["-100%", "100%"] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-0 bg-ember-500"
+            className="absolute inset-0 bg-gold-300"
           />
         </span>
       </motion.div>
