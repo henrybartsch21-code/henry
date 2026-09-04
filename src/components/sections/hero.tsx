@@ -24,7 +24,7 @@ export function Hero() {
           className="mb-8 flex items-center gap-3 text-[13px] font-medium uppercase tracking-[0.18em] text-ink-500"
         >
           <span className="h-px w-8 bg-ember-500" />
-          Digitalagentur für Marken mit Anspruch
+          Webentwicklung für Marken mit Anspruch
         </motion.p>
 
         <motion.h1
@@ -44,9 +44,9 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.5, ease: EASE }}
           className="mt-8 max-w-xl text-lg leading-relaxed text-ink-500"
         >
-          SiteCraft entwirft digitale Flaggschiffe für Unternehmen, deren
+          SiteCraft entwickelt und realisiert Websites für Unternehmen, deren
           Qualität online bisher nicht sichtbar war. Kein Template. Keine
-          Abkürzung. Jedes Projekt ein Unikat.
+          Abkürzung. Sauber umgesetzt statt zusammengeklickt.
         </motion.p>
 
         <motion.div
@@ -72,7 +72,7 @@ export function Hero() {
             data-cursor="link"
             className="text-sm font-medium text-ink-500 underline decoration-line-300 underline-offset-8 transition-colors duration-300 hover:text-ink-900 hover:decoration-ember-500"
           >
-            Ausgewählte Arbeiten ansehen
+            Ausgewählte Projekte ansehen
           </a>
         </motion.div>
 
@@ -83,9 +83,9 @@ export function Hero() {
           className="mt-24 grid max-w-2xl grid-cols-3 gap-8 border-t border-line-200 pt-8"
         >
           {[
-            ["48", "Flaggschiff-Projekte"],
+            ["48", "Umgesetzte Projekte"],
             ["8,4 J.", "Ø Zusammenarbeit"],
-            ["12", "Design-Auszeichnungen"],
+            ["< 1 s", "Ø Ladezeit"],
           ].map(([value, label]) => (
             <div key={label}>
               <div className="font-display text-2xl font-semibold text-ink-900 lg:text-3xl">

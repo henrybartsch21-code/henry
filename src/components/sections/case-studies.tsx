@@ -8,9 +8,9 @@ const CASES = [
     problem:
       "Ein verwaltetes Vermögen im dreistelligen Millionenbereich, präsentiert auf einer Website, die aussah wie ein studentisches Nebenprojekt.",
     strategy:
-      "Redesign als datengetriebenes Vertrauensinstrument: Kennzahlen, Track-Record und Investmentphilosophie visuell gleichwertig zur Markenästhetik.",
+      "Technischer Neuaufbau als datengetriebenes Vertrauensinstrument: Kennzahlen und Track-Record gleichwertig zur bestehenden Markenvorgabe umgesetzt.",
     execution:
-      "Individuelles Interface-System mit Live-Datenvisualisierung, entwickelt in Next.js mit Fokus auf Ladezeit unter 1 Sekunde.",
+      "Individuell entwickeltes Frontend mit Live-Datenvisualisierung, umgesetzt in Next.js mit Fokus auf Ladezeit unter 1 Sekunde.",
     result: "+186 %",
     resultLabel: "qualifizierte Investoren-Anfragen (6 Monate)",
   },
@@ -19,11 +19,11 @@ const CASES = [
     category: "Architektur & Städtebau",
     cover: "from-[#3d3226] via-[#1f1a14] to-[#100b06]",
     problem:
-      "Preisgekrönte Projekte, verpackt in ein Standard-Portfolio-Template, das jede visuelle Handschrift des Büros unsichtbar machte.",
+      "Preisgekrönte Projekte, verpackt in ein Standard-Portfolio-Template, das die vorhandene Bildsprache des Büros unsichtbar machte.",
     strategy:
-      "Editorial-getriebenes Storytelling: großformatige Vollbild-Projektstrecken statt Raster-Galerie, Text als gestalterisches Element.",
+      "Technische Konzeption auf Basis der Bildsprache des Büros: großformatige Vollbild-Projektstrecken statt Raster-Galerie, Inhalte redaktionell pflegbar.",
     execution:
-      "Custom-CMS-gestützte Projektseiten, aufwendige Bild-Choreografie mit scroll-gebundenen Übergängen.",
+      "Headless-CMS-Anbindung für Projektseiten, performante Bildauslieferung mit scroll-gebundenen Übergängen.",
     result: "3",
     resultLabel: "neue Großprojekte über Website-Anfragen in 6 Monaten",
   },
@@ -34,7 +34,7 @@ const CASES = [
     problem:
       "Starke stationäre Präsenz, aber die Online-Conversion lag weit unter dem Branchendurchschnitt — Besucher kauften im Laden, nicht online.",
     strategy:
-      "Produktseiten neu gedacht als digitales Verkaufsgespräch: Materialität, Herstellung und Wirkung im Zentrum statt reiner Produktfotos.",
+      "Produktseiten technisch neu aufgebaut: vorhandene Inhalte zu Material und Herstellung in eine strukturierte, conversion-orientierte Seitenlogik überführt.",
     execution:
       "Conversion-optimiertes PDP-System mit A/B-getesteten Kaufpfaden und performanter Bildauslieferung.",
     result: "+94 %",
@@ -47,7 +47,7 @@ const CASES = [
     problem:
       "Klinisch-nüchterne Kommunikation, die potenzielle Forschungspartner eher abschreckte als überzeugte — Wissenschaft ohne erkennbare Vision.",
     strategy:
-      "Editorial-Storytelling, das komplexe Forschung in klare visuelle Narrative übersetzt, ohne wissenschaftliche Präzision zu verwässern.",
+      "Vorhandene Forschungsinhalte in eine klare, lesbare Seitenarchitektur überführt, ohne wissenschaftliche Präzision zu verwässern.",
     execution:
       "Interaktive Datenvisualisierungen für Studienergebnisse, mehrsprachiges Content-System für internationale Partner.",
     result: "2",
@@ -61,10 +61,10 @@ export function CaseStudies() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <Reveal>
           <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-ember-600">
-            Ausgewählte Arbeiten
+            Ausgewählte Projekte
           </p>
           <h2 className="max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-ink-900">
-            Vier Projekte. Vier messbare Ergebnisse.
+            Vier Umsetzungen. Vier messbare Ergebnisse.
           </h2>
         </Reveal>
 

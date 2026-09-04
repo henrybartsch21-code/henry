@@ -1,16 +1,16 @@
 const NAV = [
-  { href: "#work", label: "Arbeiten" },
+  { href: "#work", label: "Projekte" },
   { href: "#services", label: "Leistungen" },
   { href: "#process", label: "Prozess" },
-  { href: "#gallery", label: "Studio-Einblick" },
-  { href: "#about", label: "Studio" },
+  { href: "#gallery", label: "Einblick" },
+  { href: "#about", label: "Über uns" },
   { href: "#faq", label: "FAQ" },
 ];
 
 const SOCIALS = [
   { href: "https://www.linkedin.com", label: "LinkedIn" },
   { href: "https://www.instagram.com", label: "Instagram" },
-  { href: "https://www.behance.net", label: "Behance" },
+  { href: "https://github.com", label: "GitHub" },
 ];
 
 export function Footer() {
@@ -23,8 +23,8 @@ export function Footer() {
               SiteCraft<span className="text-ember-600">.</span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-400">
-              Digitale Flaggschiffe für Unternehmen, deren Qualität online
-              bisher nicht sichtbar war.
+              Technisch sauber umgesetzte Websites für Unternehmen, deren
+              Qualität online bisher nicht sichtbar war.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-line-200 pt-8 text-xs text-ink-400 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} SiteCraft Studio GmbH. Alle Rechte vorbehalten.</span>
+          <span>© {new Date().getFullYear()} SiteCraft GmbH. Alle Rechte vorbehalten.</span>
           <div className="flex gap-6">
             <a href="/impressum" className="hover:text-ink-700">
               Impressum

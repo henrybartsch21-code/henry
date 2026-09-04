@@ -3,19 +3,19 @@ import { Reveal } from "@/components/ui/reveal";
 const QUOTES = [
   {
     quote:
-      "Wir haben drei Agenturen vorher briefen lassen. Alle drei kamen mit demselben Vorschlag zurück — nur mit anderen Farben. SiteCraft hat als Erste gefragt, warum unsere Investoren uns überhaupt vertrauen, bevor ein einziges Wireframe entstand.",
+      "Wir haben vorher drei Anbieter briefen lassen. Alle drei kamen mit demselben Vorschlag zurück — nur mit anderen Farben. SiteCraft hat als Erste gefragt, was die Seite technisch leisten muss, bevor die erste Zeile Code entstand.",
     name: "Corinna Ahlgren",
     role: "Head of Marketing, Nordlicht Capital",
   },
   {
     quote:
-      "Was mich überzeugt hat, war nicht das finale Design — das kam sowieso. Es war, dass jede Entscheidung begründet wurde. Keine Geschmacksfrage, sondern Argumentation. Das gibt es selten in dieser Branche.",
+      "Was mich überzeugt hat, war nicht das fertige Ergebnis — das kam sowieso. Es war, dass jede technische Entscheidung begründet wurde. Keine Geschmacksfrage, sondern Argumentation. Das gibt es selten in dieser Branche.",
     name: "Julian Verse",
     role: "Gründer, Velis Architecture",
   },
   {
     quote:
-      "Unsere Forschung ist komplex. Die alte Website hat das mit noch mehr Komplexität beantwortet. SiteCraft hat sie lesbar gemacht, ohne sie zu vereinfachen — genau die Balance, die wir bei drei anderen Studios vermisst haben.",
+      "Unsere Forschung ist komplex. Die alte Website hat das mit noch mehr Komplexität beantwortet. SiteCraft hat die Inhalte lesbar strukturiert, ohne sie zu vereinfachen — genau die Balance, die wir bei drei anderen Anbietern vermisst haben.",
     name: "Dr. Nadine Oskar",
     role: "Head of Communications, Aurel Biotech",
   },

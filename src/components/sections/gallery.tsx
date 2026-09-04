@@ -5,25 +5,25 @@ import { motion } from "framer-motion";
 
 const VISUALS = [
   {
-    label: "Studio-Loft, Vormittagslicht",
+    label: "Arbeitsplatz, Vormittagslicht",
     span: "lg:col-span-7",
     aspect: "aspect-[16/11]",
     gradient: "from-surface-200 via-surface-100 to-surface-50",
   },
   {
-    label: "Material: Travertin, Kupfer, Leinen",
+    label: "Testgeräte für die responsive Prüfung",
     span: "lg:col-span-5",
     aspect: "aspect-[4/5]",
     gradient: "from-ember-100 via-surface-100 to-surface-200",
   },
   {
-    label: "Arbeitsmoment: Skizze neben Wireframe",
+    label: "Arbeitsmoment: Code neben Live-Vorschau",
     span: "lg:col-span-5",
     aspect: "aspect-[4/5]",
     gradient: "from-surface-100 via-surface-50 to-surface-200",
   },
   {
-    label: "Präsentationsraum, Detailbesprechung",
+    label: "Besprechungsraum, Detailabstimmung",
     span: "lg:col-span-7",
     aspect: "aspect-[16/11]",
     gradient: "from-surface-200 via-ember-100 to-surface-50",
@@ -36,14 +36,14 @@ export function Gallery() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
         <Reveal>
           <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-ember-600">
-            Studio-Einblick
+            Einblick
           </p>
           <h2 className="max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-ink-900">
             Wo Entscheidungen wirklich getroffen werden.
           </h2>
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-ink-500">
-            Kein Stockfoto-Loft. Ein Arbeitsraum, in dem Materialproben,
-            Wireframes und Kaffeeflecken nebeneinander liegen — weil gute
+            Kein Stockfoto-Loft. Ein Arbeitsraum, in dem Testgeräte,
+            Code-Reviews und Kaffeeflecken nebeneinander liegen — weil gute
             Entscheidungen selten am aufgeräumten Schreibtisch entstehen.
           </p>
         </Reveal>
