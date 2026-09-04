@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import { Magnetic } from "@/components/ui/magnetic";
 
 const LINKS = [
-  { href: "#work", label: "Arbeiten" },
+  { href: "#work", label: "Projekte" },
   { href: "#services", label: "Leistungen" },
   { href: "#process", label: "Prozess" },
-  { href: "#gallery", label: "Studio-Einblick" },
-  { href: "#about", label: "Studio" },
+  { href: "#gallery", label: "Einblick" },
+  { href: "#about", label: "Über uns" },
   { href: "#faq", label: "FAQ" },
 ];
 

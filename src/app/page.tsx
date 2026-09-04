@@ -17,7 +17,8 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "SiteCraft",
   description:
-    "Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development.",
+    "Webentwicklung: technische Umsetzung, Performance-Optimierung und CMS-Integration moderner Websites.",
+  serviceType: "Webentwicklung",
   url: "https://sitecraft.agency",
   areaServed: "DE",
   address: {

@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/reveal";
 const FAQS = [
   {
     q: "Für wen ist SiteCraft die richtige Wahl?",
-    a: "Für Unternehmen, die operativ bereits erfolgreich sind, deren digitale Präsenz das aber nicht widerspiegelt. Wir arbeiten am liebsten mit Entscheider:innen, die Design als Investition verstehen, nicht als Kostenpunkt.",
+    a: "Für Unternehmen, die operativ bereits erfolgreich sind, deren digitale Präsenz das aber nicht widerspiegelt. Wir arbeiten am liebsten mit Entscheider:innen, die eine saubere technische Umsetzung als Investition verstehen, nicht als Kostenpunkt.",
   },
   {
     q: "Wie lange dauert ein typisches Projekt?",
@@ -15,15 +15,15 @@ const FAQS = [
   },
   {
     q: "Was kostet ein Projekt bei SiteCraft?",
-    a: "Projekte starten ab 18.000 €, die meisten bewegen sich zwischen 30.000 € und 65.000 € — abhängig von Umfang, Custom-Development-Anteil und Content-Erstellung. Nach dem Erstgespräch erhalten Sie ein verbindliches Angebot.",
+    a: "Projekte starten ab 18.000 €, die meisten bewegen sich zwischen 30.000 € und 65.000 € — abhängig von Umfang, Entwicklungsaufwand und Content-Integration. Nach dem Erstgespräch erhalten Sie ein verbindliches Angebot.",
   },
   {
-    q: "Übernehmen Sie auch Content und Copywriting?",
-    a: "Ja. Texte, die nicht verkaufen, sind das teuerste Design-Element einer Website. Copywriting ist deshalb fester Bestandteil unseres Prozesses, nicht optional zubuchbar.",
+    q: "Wie läuft es mit Inhalten, Bildern und Branding?",
+    a: "Texte, Bildmaterial und Branding kommen von Ihnen oder Ihrer Agentur. Wir strukturieren diese Inhalte technisch, setzen vorhandene Vorgaben und Referenzen um, binden alles sauber ins CMS ein und sorgen für optimierte Auslieferung.",
   },
   {
     q: "Was passiert nach dem Launch?",
-    a: "Die ersten 90 Tage nach Launch sind in jedem Projekt inklusive: Monitoring, kleinere Anpassungen, Performance-Feintuning. Danach bieten wir optionale, monatliche Optimierungs-Retainer an.",
+    a: "Die ersten 90 Tage nach der Veröffentlichung sind in jedem Projekt inklusive: Monitoring, kleinere Anpassungen, Performance-Feintuning. Danach bieten wir optionale, monatliche Wartungs- und Optimierungs-Retainer an.",
   },
   {
     q: "Arbeiten Sie mit bestehenden CMS-Systemen?",

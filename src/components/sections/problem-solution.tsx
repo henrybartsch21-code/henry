@@ -2,14 +2,14 @@ import { Reveal } from "@/components/ui/reveal";
 
 const PROBLEMS = [
   "Die Website sieht aus wie vor sieben Jahren gebaut — das Geschäft dahinter ist es nicht.",
-  "Jede Agentur bisher hat ein Template mit neuen Farben geliefert, kein System.",
+  "Jeder Anbieter bisher hat ein Template mit neuen Farben geliefert, keine saubere Umsetzung.",
   "Ladezeiten, mobile Darstellung und Conversion wurden nie als Geschäftsproblem behandelt.",
 ];
 
 const ANSWERS = [
-  "Individuelles Design-System statt Baukasten — entwickelt für genau ein Unternehmen.",
-  "Forschung vor Pixeln: Zielgruppen-Interviews, Wettbewerbsanalyse, Content-Strategie.",
-  "Performance und Conversion sind Designentscheidungen, kein Nachgedanke.",
+  "Individuell entwickeltes Frontend statt Baukasten — gebaut für genau ein Unternehmen.",
+  "Technische Konzeption vor der Umsetzung: Anforderungen, Struktur, Content-Integration.",
+  "Performance, Barrierefreiheit und Conversion sind Teil der Implementierung, kein Nachgedanke.",
 ];
 
 export function ProblemSolution() {
@@ -46,7 +46,7 @@ export function ProblemSolution() {
           <div>
             <Reveal>
               <h3 className="font-display text-sm font-semibold uppercase tracking-[0.1em] text-ember-600">
-                02 — Was SiteCraft anders macht
+                02 — Wie SiteCraft umsetzt
               </h3>
             </Reveal>
             <ul className="mt-8 space-y-8 border-t border-line-300">

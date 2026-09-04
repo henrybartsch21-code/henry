@@ -8,25 +8,25 @@ const STEPS = [
     number: "01",
     title: "Analyse",
     description:
-      "Zielgruppen-Interviews, Wettbewerbs-Audit, technische Bestandsaufnahme. Wir verstehen das Geschäft, bevor wir ein Interface anfassen.",
+      "Anforderungsaufnahme, technische Bestandsaufnahme, Zieldefinition. Wir verstehen das Geschäft, bevor die erste Zeile Code entsteht.",
   },
   {
     number: "02",
-    title: "Strategie",
+    title: "Konzeption",
     description:
-      "Positionierung, Informationsarchitektur und Content-Struktur werden festgelegt — die Grundlage, auf der jede Designentscheidung aufbaut.",
+      "Seitenstruktur, Informationsarchitektur und Content-Aufbau werden festgelegt — die Grundlage, auf der jede technische Entscheidung aufbaut.",
   },
   {
     number: "03",
     title: "Umsetzung",
     description:
-      "Design und Entwicklung laufen parallel in wöchentlichen Zyklen. Sie sehen Fortschritt, nicht nur ein finales Reveal nach zwei Monaten.",
+      "Entwicklung und Content-Integration laufen in wöchentlichen Zyklen. Sie sehen Fortschritt, nicht nur ein fertiges Ergebnis nach zwei Monaten.",
   },
   {
     number: "04",
     title: "Optimierung",
     description:
-      "Nach Launch beginnt die eigentliche Arbeit: Daten auswerten, iterieren, Conversion kontinuierlich verbessern.",
+      "Nach der Veröffentlichung beginnt die eigentliche Arbeit: messen, nachziehen, Performance und Funktionalität kontinuierlich verbessern.",
   },
 ];
 

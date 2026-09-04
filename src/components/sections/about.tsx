@@ -7,7 +7,7 @@ const PILLARS = [
   {
     title: "Präzision",
     description:
-      "Jedes Pixel, jeder Übergang, jeder Satz ist eine Entscheidung — keine Voreinstellung eines Frameworks.",
+      "Jede Komponente, jeder Übergang, jeder Wert ist eine Entscheidung — keine Voreinstellung eines Frameworks.",
   },
   {
     title: "Beweisbarkeit",
@@ -15,9 +15,9 @@ const PILLARS = [
       "Ergebnisse drücken wir in Zahlen aus, nicht in Adjektiven. Was wir behaupten, lässt sich nachmessen.",
   },
   {
-    title: "Zurückhaltung",
+    title: "Wartbarkeit",
     description:
-      "Premium zeigt sich durch Ruhe und Klarheit — nicht durch visuellen Lärm oder Effekthascherei.",
+      "Sauberer, dokumentierter Code, der in drei Jahren noch erweiterbar ist — nicht nur am Launch-Tag.",
   },
   {
     title: "Partnerschaft",
@@ -34,10 +34,10 @@ export function About() {
           <div>
             <Reveal>
               <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.18em] text-ember-600">
-                Das Studio
+                Über uns
               </p>
               <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-ink-900">
-                Gegründet aus Frustration über Baukasten-Websites für Unternehmen, die es besser verdient hätten.
+                Entstanden aus Frustration über Baukasten-Websites für Unternehmen, die es besser verdient hätten.
               </h2>
             </Reveal>
 
@@ -45,15 +45,15 @@ export function About() {
               <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-ink-500">
                 <p>
                   SiteCraft entstand, weil zu viele gute Unternehmen von
-                  austauschbaren Websites vertreten wurden. Nicht aus
+                  technisch schwachen Websites vertreten wurden. Nicht aus
                   Geizigkeit — aus Unwissenheit darüber, dass es einen
                   Unterschied macht.
                 </p>
                 <p>
                   Heute arbeitet ein kleines, absichtlich kleines Team aus
-                  Strategen, Designer:innen und Entwickler:innen an wenigen
-                  Projekten gleichzeitig — nie mehr, als sich mit voller
-                  Aufmerksamkeit betreuen lässt.
+                  Entwickler:innen an wenigen Projekten gleichzeitig — nie
+                  mehr, als sich mit voller Aufmerksamkeit umsetzen und
+                  betreuen lässt.
                 </p>
               </div>
             </Reveal>
@@ -64,7 +64,7 @@ export function About() {
                 className="mt-10 flex aspect-[16/10] items-end overflow-hidden rounded-2xl border border-line-200 bg-gradient-to-br from-surface-100 via-surface-50 to-surface-200 p-6 shadow-[0_20px_45px_-25px_rgba(30,26,20,0.35)]"
               >
                 <span className="text-xs uppercase tracking-[0.15em] text-ink-400">
-                  Studio-Portrait — Team am großen Fenster, Gegenlicht
+                  Arbeitsplatz — Team am großen Fenster, Gegenlicht
                 </span>
               </div>
             </Reveal>

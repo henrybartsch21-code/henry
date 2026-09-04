@@ -6,24 +6,24 @@ import { motion } from "framer-motion";
 const SERVICES = [
   {
     number: "01",
-    title: "Markenidentität",
+    title: "Technische Konzeption",
     description:
-      "Positionierung, visuelle Sprache und Wortmarke — entwickelt aus dem, was ein Unternehmen tatsächlich einzigartig macht, nicht aus einem Moodboard.",
-    points: ["Markenstrategie", "Visuelles System", "Verbal Identity"],
+      "Anforderungsanalyse, Informationsarchitektur und technische Planung — bevor die erste Zeile Code entsteht, steht die Struktur der Website fest.",
+    points: ["Anforderungsanalyse", "Seitenstruktur", "Technische Planung"],
   },
   {
     number: "02",
-    title: "Digitales Produktdesign",
+    title: "Website-Entwicklung",
     description:
-      "UX-Research, Informationsarchitektur und Interface-Design für Websites und Web-Applikationen, die Besucher tatsächlich durch den Kaufprozess führen.",
-    points: ["UX-Research", "Interface-Design", "Design-System"],
+      "Vorhandene Vorgaben, Inhalte und Branding werden in eine responsive, wartbare Website überführt — sauber implementiert statt aus dem Baukasten zusammengesetzt.",
+    points: ["Next.js / React", "Responsive Umsetzung", "CMS-Integration"],
   },
   {
     number: "03",
-    title: "Entwicklung & Performance",
+    title: "Performance & Betrieb",
     description:
-      "Sauber entwickelte, extrem schnelle Frontends — barrierefrei, SEO-fundiert und so gebaut, dass sie in drei Jahren noch skalieren, nicht nur beim Launch.",
-    points: ["Next.js / React", "Core-Web-Vitals", "CMS-Integration"],
+      "Extrem schnelle Frontends — barrierefrei, technisch SEO-fundiert und so gebaut, dass sie in drei Jahren noch skalieren, nicht nur beim Launch.",
+    points: ["Core Web Vitals", "Technisches SEO", "Deployment"],
   },
 ];
 
@@ -36,7 +36,7 @@ export function Services() {
             Leistungen
           </p>
           <h2 className="max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.05] tracking-tight text-ink-900">
-            Drei Disziplinen. Ein durchgängiges System.
+            Drei Leistungsbereiche. Eine durchgängige Umsetzung.
           </h2>
         </Reveal>
 

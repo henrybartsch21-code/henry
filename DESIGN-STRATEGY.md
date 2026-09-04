@@ -1,4 +1,4 @@
-# SiteCraft — Design- & Markenstrategie
+# SiteCraft — Positionierungs- & Umsetzungsstrategie
 
 > Interne Strategiegrundlage für den Premium-Website-Relaunch. Dieses Dokument ist die
 > Entscheidungsgrundlage für Copy, Visuals, Motion und Technik — jede Komponente im Code
@@ -9,9 +9,10 @@
 ## 1. Markenstrategie
 
 **Marke:** SiteCraft
-**Branche:** Premium-Digitalagentur (Brand Design, UX/UI, Web-Development, Digital Strategy)
-**Angebot:** Markenidentität, digitale Produktdesigns, High-End-Websites, Web-Applikationen,
-laufende Optimierung (CRO, Performance, Content)
+**Branche:** Webentwicklung (technische Konzeption, Website-Entwicklung, Performance, Betrieb)
+**Angebot:** Technische Konzeption, Entwicklung und responsive Umsetzung von Websites und
+Web-Applikationen auf Basis vorhandener Vorgaben, Inhalte und Branding; CMS-Integration,
+Deployment sowie laufende technische Optimierung (Performance, Core Web Vitals, Wartung)
 **Zielgruppe:** Gründer:innen, CEOs und Marketingverantwortliche von wachstumsstarken
 Unternehmen (Scale-ups, Premium-D2C-Marken, B2B-Marktführer, Family-Offices, Kanzleien,
 Private-Equity-nahe Firmen), deren Offline-Qualität online nicht sichtbar ist.
@@ -27,21 +28,21 @@ sondern fehlendes Vertrauen, dass „Premium" tatsächlich geliefert wird.
 ### Positionierung
 
 **Nicht:** „Wir helfen Unternehmen, online erfolgreich zu sein."
-**Sondern:** *„SiteCraft entwirft digitale Flaggschiffe für Marken, die es sich nicht leisten
-können, unterschätzt zu werden."*
+**Sondern:** *„SiteCraft entwickelt und realisiert moderne Websites mit Fokus auf technische
+Umsetzung, Performance, Funktionalität und zuverlässige Implementierung."*
 
 Der Claim, den SiteCraft besitzt: **Craft statt Copy-Paste.** Während der Markt zwischen
 zwei Extremen pendelt — Billig-Baukasten oder überteuerte Konzern-Agentur ohne
 Verantwortung für Ergebnisse — positioniert sich SiteCraft als das kleine, obsessiv
-präzise Studio, das jede Website wie ein Produkt behandelt: mit Forschung, Prototyping,
-Iteration und einem messbaren Ergebnis am Ende.
+präzise Entwicklungsteam, das jede Website wie ein Produkt behandelt: mit Anforderungsanalyse,
+technischer Konzeption, Iteration und einem messbaren Ergebnis am Ende.
 
 ### Markensäulen
 
-1. **Präzision** — jedes Pixel, jeder Übergang, jeder Satz ist eine Entscheidung, keine
+1. **Präzision** — jede Komponente, jeder Übergang, jeder Wert ist eine Entscheidung, keine
    Voreinstellung.
 2. **Beweisbarkeit** — Ergebnisse werden in Zahlen ausgedrückt, nicht in Adjektiven.
-3. **Zurückhaltung** — Premium zeigt sich durch Ruhe und Klarheit, nicht durch visuellen Lärm.
+3. **Wartbarkeit** — sauberer, dokumentierter Code, der auch nach Jahren erweiterbar bleibt.
 4. **Partnerschaft** — SiteCraft liefert nicht „ein Projekt ab", sondern übernimmt mit dem
    Kunden Verantwortung für das Ergebnis.
 
@@ -54,7 +55,7 @@ Senior-Beraters, der weiß, was er tut, und das nicht beweisen muss, indem er la
 ### Elevator Pitch (Hero-Leitgedanke)
 
 *„Es gibt einen Unterschied zwischen einer Website, die existiert, und einer, die verkauft.
-SiteCraft baut Zweiteres."*
+SiteCraft entwickelt Zweiteres."*
 
 ---
 
@@ -147,9 +148,9 @@ maximiert Erzähl-Fluss & Conversion-Pfad), plus dedizierte Case-Study-Detailebe
 ├─ #services        3 Leistungsfelder mit visueller Erklärung
 ├─ #process         4-Phasen-Prozess (Analyse → Strategie → Umsetzung → Optimierung)
 ├─ #work            Case-Study-Grid (4 Flaggschiff-Projekte)
-├─ #gallery         Visuelles Moodboard / Studio-Atmosphäre (neu)
+├─ #gallery         Visuelles Moodboard / Arbeitsatmosphäre (neu)
 ├─ #testimonials    2 ausführliche O-Töne
-├─ #about           Markenstory / Studio-Philosophie
+├─ #about           Unternehmensstory / Arbeitsweise
 ├─ #faq             7 Einwand-Behandlungen
 ├─ #cta             Premium-Abschluss-CTA (Kontaktformular / Kalender)
 └─ Footer           Navigation, Kontakt, Social, Rechtliches
@@ -234,11 +235,11 @@ Videodatei erzeugt. Vier Platzierungen statt vorher drei — zusätzlich CTA-Sek
 | 3 | Case-Study-Cover 2 (Architekturbüro) | `#work` Card 2 | Editorial Architekturfotografie, ruhiges Tageslicht | „Editorial architectural photography, minimalist limestone building facade, soft daylight, warm neutral tones, negative space for text overlay, shot on medium format film, no people" |
 | 4 | Case-Study-Cover 3 (D2C-Marke) | `#work` Card 3 | Produktfotografie, helle gedeckte Töne | „Premium product photography, single hero product on light travertine surface, warm directional studio light, soft shadow falloff, minimalist composition, editorial commerce photography" |
 | 4b | Case-Study-Cover 4 (Life Sciences) *(neu)* | `#work` Card 4 | Laborfotografie, klar und vertrauenswürdig statt klinisch-kalt | „Editorial photography of a modern biotech research lab, soft natural light through large windows, warm neutral tones, scientific equipment softly out of focus, no people, trustworthy and human atmosphere" |
-| 5 | Über-uns-Portrait | `#about` | Redaktionelles Studio-Portrait, Gegenlicht durch großes Fenster | „Editorial portrait of a small design studio team reviewing a large screen in a bright loft office, large window backlight, warm neutral tones, candid unposed moment, documentary photography style" |
+| 5 | Über-uns-Portrait | `#about` | Redaktionelles Arbeitsplatz-Portrait, Gegenlicht durch großes Fenster | „Editorial portrait of a small web development team reviewing code on a large screen in a bright loft office, large window backlight, warm neutral tones, candid unposed moment, documentary photography style" |
 | 6 | Prozess-Icons (4x) | `#process` | Custom Line-Icons in Kupfer, kein Icon-Font-Klischee | *(als individuelles SVG-Set im Code, keine Bild-Generierung nötig)* |
-| 7 | Büro-/Studio-Atmosphäre *(neu)* | `#gallery` Moodboard | Editorial Interior-Fotografie, minimalistisches Studio | „Editorial interior photography of a minimalist design studio, natural oak furniture, linen textures, large windows, soft midday light, warm neutral palette, no people, architectural digest style" |
+| 7 | Büro-/Arbeitsatmosphäre *(neu)* | `#gallery` Moodboard | Editorial Interior-Fotografie, minimalistisches Büro | „Editorial interior photography of a minimalist software development office, natural oak furniture, large windows, soft midday light, warm neutral palette, no people, architectural digest style" |
 | 8 | Materialdetail *(neu)* | `#gallery` Moodboard | Makro-Detailaufnahme, Materialität | „Macro photograph of natural materials — travertine stone, brushed copper, raw linen fabric — arranged in a flat lay, soft diffused daylight, warm minimalist palette, editorial texture photography" |
-| 9 | Team bei der Arbeit *(neu)* | `#gallery` Moodboard | Dokumentarischer Arbeitsmoment | „Documentary photograph of a designer sketching on paper next to a laptop showing a UI wireframe, bright naturally lit desk, warm tones, shallow depth of field, editorial lifestyle photography, no visible logos" |
+| 9 | Team bei der Arbeit *(neu)* | `#gallery` Moodboard | Dokumentarischer Arbeitsmoment | „Documentary photograph of a developer working on a laptop showing code next to a live website preview on a second screen, bright naturally lit desk, warm tones, shallow depth of field, editorial lifestyle photography, no visible logos" |
 | 10 | Auszeichnungs-/Presselogos *(neu)* | `#trust` Presseleiste | Reduzierte Wortmarken, monochrom | *(als Typografie-Set im Code, keine Bild-Generierung nötig)* |
 
 ---

@@ -9,32 +9,32 @@ const siteUrl = "https://sitecraft.agency";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SiteCraft — Digitale Flaggschiffe für Marken mit Anspruch",
+    default: "SiteCraft — Webentwicklung für Marken mit Anspruch",
     template: "%s — SiteCraft",
   },
   description:
-    "SiteCraft ist eine Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development. Wir bauen keine Websites, die existieren — sondern welche, die verkaufen.",
+    "SiteCraft entwickelt und realisiert moderne Websites mit Fokus auf technische Umsetzung, Performance, Funktionalität und zuverlässige Implementierung.",
   keywords: [
-    "Premium Digitalagentur",
-    "Webdesign Agentur",
-    "UX UI Design",
-    "Markenidentität",
-    "Web Development",
+    "Webentwicklung",
+    "Website-Entwicklung",
+    "Next.js Entwicklung",
+    "Performance-Optimierung",
+    "CMS-Integration",
   ],
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: siteUrl,
     siteName: "SiteCraft",
-    title: "SiteCraft — Digitale Flaggschiffe für Marken mit Anspruch",
+    title: "SiteCraft — Webentwicklung für Marken mit Anspruch",
     description:
-      "Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development.",
+      "Entwicklung moderner Websites: technische Umsetzung, Performance, CMS-Integration.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SiteCraft — Digitale Flaggschiffe für Marken mit Anspruch",
+    title: "SiteCraft — Webentwicklung für Marken mit Anspruch",
     description:
-      "Premium-Digitalagentur für Markenidentität, digitales Produktdesign und Web-Development.",
+      "Entwicklung moderner Websites: technische Umsetzung, Performance, CMS-Integration.",
   },
   robots: { index: true, follow: true },
 };

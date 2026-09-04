@@ -1,8 +1,9 @@
-# SiteCraft — Premium-Digitalagentur-Website
+# SiteCraft — Website für Webentwicklung
 
-Next.js/TypeScript/Tailwind-Website für SiteCraft, eine fiktive
-Premium-Digitalagentur. Die vollständige Design- und Markenstrategie,
-Sitemap sowie Video-/Bild-Produktionsbriefings stehen in
+Next.js/TypeScript/Tailwind-Website für SiteCraft, einen fiktiven Anbieter
+für Webentwicklung und technische Website-Umsetzung. Die vollständige
+Positionierungs- und Umsetzungsstrategie, Sitemap sowie Video-/Bild-
+Produktionsbriefings stehen in
 [`DESIGN-STRATEGY.md`](./DESIGN-STRATEGY.md).
 
 ## Stack
@@ -36,7 +37,7 @@ src/
 ## Bekannte Platzhalter
 
 - `#work`-Case-Studies, Testimonials, Kundenlogos und Kennzahlen sind
-  redaktionell erstellte Beispielinhalte für ein fiktives Studio — vor
+  redaktionell erstellte Beispielinhalte für einen fiktiven Anbieter — vor
   einem echten Launch durch reale Kundendaten ersetzen.
 - `/impressum` und `/datenschutz` enthalten Hinweistexte statt echter
   rechtlicher Angaben (siehe Seiteninhalt).
