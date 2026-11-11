@@ -6,19 +6,39 @@
 export const FPS = 60;
 export const WIDTH = 1080;
 export const HEIGHT = 1920;
-export const DURATION = 30;
+export const DURATION = 20;
+
+/** Der getippte Prompt (zwei Zeilen). */
+export const PROMPT = ["Ich will eine Website,", "die Kunden gewinnt."];
 
 export const T = {
-  // SZENE 1 — THE PROBLEM
-  s1: { line: 0.35, title: 0.95, titleOut: 2.25, seconds: 2.6, out: 3.72 },
-  // SZENE 2 — THE DIFFERENCE
-  s2: { in: 4.0, freeze: 5.5, shatter: 5.65, assemble: 6.25, settled: 7.1, text: 7.4, out: 8.62 },
-  // SZENE 3 — THE SWELLORA EXPERIENCE
-  s3: { in: 9.0, move1: 10.9, move2: 12.8, text1: 10.0, text1Out: 12.05, text2: 12.4, text2Out: 14.45, out: 14.7 },
-  // SZENE 4 — THE OFFER
-  s4: { title: 15.3, riser: 16.0, free: 16.8, sub: 17.9, preview: 18.8, previewSettled: 20.2, out: 20.7 },
-  // SZENE 5 — THE EMOTIONAL PAYOFF
-  s5: { in: 21.0, shots: [21.8, 22.35, 22.9, 23.45, 24.0], text1: 24.45, text2: 25.15, out: 25.72 },
-  // SZENE 6 — THE FINAL REVEAL
-  s6: { in: 26.0, pulse: 26.2, logo: 26.5, tagline: 27.5, cta: 28.1, button: 28.6 },
+  // 1 — Licht & Marke
+  open: { flare: 0.3, logo: 0.9, out: 2.25 },
+  // 2 — Der Wunsch (Prompt wird getippt)
+  prompt: { in: 2.35, typeStart: 2.65, typeEnd: 4.55, send: 5.0 },
+  // 3 — Code-Rausch
+  code: { in: 5.0, out: 6.25 },
+  // 4 — Die Website entsteht, drei Designs im Flip
+  card: { in: 6.2, settled: 7.1, text1: 7.25, flip1: 8.5, text2: 8.8, flip2: 9.5, out: 10.3 },
+  // 5 — Das Angebot
+  offer: { in: 10.5, title: 10.8, free: 12.0, sub: 13.1, out: 14.3 },
+  // 6 — Marke & Call-to-Action
+  end: { in: 14.5, logo: 14.7, tagline: 15.6, cta: 16.3, button: 16.9, click: 17.8 },
+  /** Lichtblitze auf den Schnitten: [Zeit, Stärke] */
+  flashes: [
+    [2.3, 0.3],
+    [5.0, 0.75],
+    [6.25, 0.6],
+    [8.5, 0.45],
+    [9.5, 0.45],
+    [10.5, 0.55],
+    [12.0, 0.95],
+    [14.5, 0.6],
+    [17.8, 0.16],
+  ],
 } as const;
+
+/** Zeitpunkt, zu dem das n-te Zeichen des Prompts erscheint. */
+export const PROMPT_LEN = PROMPT.join("").length;
+export const charTime = (n: number) =>
+  T.prompt.typeStart + ((T.prompt.typeEnd - T.prompt.typeStart) * n) / PROMPT_LEN + (n >= PROMPT[0].length ? 0.16 : 0);

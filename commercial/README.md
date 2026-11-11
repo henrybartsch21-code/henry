@@ -1,13 +1,13 @@
 # SWELLORA — Motion Design Commercial
 
-30-Sekunden-Werbespot für Instagram Reels, TikTok und YouTube Shorts.
+20-Sekunden-Werbespot für Instagram Reels, TikTok und YouTube Shorts.
 Vollständig in Code animiert mit [Remotion](https://www.remotion.dev) (React + TypeScript).
 
 | | |
 |---|---|
 | Format | 1080 × 1920 (9:16) |
-| Framerate | 60 FPS (1800 Frames) |
-| Länge | 30 s |
+| Framerate | 60 FPS, gerendert mit 240 FPS und zu echter Bewegungsunschärfe verrechnet |
+| Länge | 20 s |
 | Ton | 48 kHz Stereo, prozedural synthetisiert (keine Samples, keine Lizenzen) |
 | Schrift | Inter Variable (lokal gebündelt, SIL Open Font License) |
 
@@ -16,43 +16,47 @@ Vollständig in Code animiert mit [Remotion](https://www.remotion.dev) (React + 
 ```bash
 cd commercial
 npm install
-npm run render        # → out/swellora-commercial.mp4
+npm run render        # Master mit Motion Blur → out/swellora-commercial.mp4
+npm run render:fast   # schnelle Vorschau ohne Motion Blur
 ```
 
-`npm run studio` öffnet das Remotion Studio mit Timeline-Vorschau.
-`npm run assets` erzeugt nur Tonspur und Filmkorn neu.
+Benötigt `ffmpeg` im Pfad. `npm run studio` öffnet das Remotion Studio mit Timeline-Vorschau.
 
 Remotion lädt beim ersten Render einen Headless-Browser. Soll ein vorhandener
 Browser verwendet werden: `REMOTION_BROWSER=/pfad/zu/chrome npm run render`.
+
+## Ablauf
+
+1. **Licht & Marke** — Flutlicht zündet, SWELLORA tritt aus den Lichtbändern
+2. **Der Wunsch** — Prompt wird getippt: „Ich will eine Website, die Kunden gewinnt."
+3. **Code-Rausch** — Speed-Ramp durch den Quelltext
+4. **Die Website** — schwebende Glas-Karte, drei Designs im Flip
+5. **Das Angebot** — „Dein erster Entwurf. 100 % kostenlos." mit Lichtimpuls und Funkenflug
+6. **Call-to-Action** — Logo, „Jetzt kostenlosen Entwurf sichern", Klick auf „Jetzt anfragen"
 
 ## Aufbau
 
 ```
 src/
-  timeline.ts            Einsätze aller Szenen in Sekunden — gilt für Bild UND Ton
-  Commercial.tsx         Komposition: Szenenfenster, Filmkorn, Tonspur
-  lib/motion.ts          Easing-Kurven, ramp(), Keyframes
+  timeline.ts          Einsätze aller Szenen in Sekunden — gilt für Bild UND Ton
+  Commercial.tsx       Komposition: Lichtbänder, Szenenfenster, Lichtblitze
+  lib/motion.ts        Easing-Kurven, ramp(), Keyframes
   components/
-    Reveal.tsx           Masked Text Reveal mit Bewegungsunschärfe
-    Browser.tsx          Browserfenster
-    MotionBlur.tsx       gerichtete Bewegungsunschärfe für Kamerafahrten
-    art.tsx              Vektor-Stills (Uhr, Sideboard, Architektur …)
-    sites.tsx            drei Website-Designs für Szene 3
-    ShowcasePage.tsx     lange Hero-Website + Mobile-Ansicht (Szene 4/5)
-  scenes/                Szene 1–6 gemäß Storyboard
+    Light.tsx          Lichtbänder, Flare, Glow-Werte
+    Type.tsx           Text-Reveal, Swellora-Zeichen, Mauszeiger
+  scenes/              Open, Prompt, Code, Card, Offer, End
 scripts/
-  generate-assets.mts    Sound Design: Musik, Klicks, Whooshes, Impact, Markensignatur
+  generate-assets.mts  Sound Design: Musik, Klicks, Whooshes, Impact, Markensignatur
+  render.mjs           Master-Render (240 FPS → 60 FPS mit Motion Blur, Filmkorn, Ton)
 ```
 
 ## Anpassen
 
-- **Timing:** `src/timeline.ts`. Bild und Ton lesen dieselben Werte; nach einer
-  Änderung bleibt alles synchron.
-- **Texte:** direkt in der jeweiligen Szene unter `src/scenes/`.
-- **Logo:** Szene 6 nutzt einen typografischen SWELLORA-Schriftzug als Platzhalter.
-  Für das Original-Logo die Buchstaben-Spans in `Scene6Reveal.tsx` durch ein
-  `<Img src={staticFile("logo.svg")} />` ersetzen.
+- **Timing:** `src/timeline.ts`. Bild und Ton lesen dieselben Werte.
+- **Texte:** Prompt in `src/timeline.ts`, alles andere in der jeweiligen Szene.
+- **Website-Designs:** Liste `designs` in `src/scenes/Card.tsx`.
+- **Logo:** `Mark` in `src/components/Type.tsx` ist ein Platzhalter-Zeichen;
+  dort das Original-Logo einsetzen.
 - **Sound:** alle Klänge und Pegel stehen in `scripts/generate-assets.mts`.
 
-Die gezeigten Marken (Brandt, Aurèle, Nordwerk, Studio Marén, Halden) sind
-frei erfundene Beispielkunden.
+Die gezeigten Marken (Nordlicht, Atelier Weiss, Kraftwerk) sind frei erfundene Beispielkunden.

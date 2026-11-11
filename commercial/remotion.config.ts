@@ -6,6 +6,7 @@ Config.setVideoImageFormat("jpeg");
 Config.setJpegQuality(96);
 Config.setCodec("h264");
 Config.setCrf(15);
+Config.setConcurrency(4);
 Config.setPixelFormat("yuv420p");
 Config.setOverwriteOutput(true);
 Config.setChromiumOpenGlRenderer("swangle");
