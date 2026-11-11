@@ -39,7 +39,7 @@ export const Spread: React.FC<{
 
 /** Das Swellora-Zeichen: eine Welle im Kreis. */
 export const Mark: React.FC<{ size: number; draw?: number; style?: React.CSSProperties }> = ({ size, draw = 1, style }) => (
-  <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 0 14px rgba(140,185,255,0.9)) drop-shadow(0 0 44px rgba(60,110,255,0.8))", ...style }}>
+  <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 0 16px rgba(120,170,255,0.95))", ...style }}>
     <circle cx="50" cy="50" r="42" fill="none" stroke="#fff" strokeWidth="5" strokeDasharray={264} strokeDashoffset={264 * (1 - draw)} transform="rotate(-90 50 50)" strokeLinecap="round" />
     <path d="M24 57 C 34 33, 44 33, 50 50 S 66 67, 76 43" fill="none" stroke="#fff" strokeWidth="7" strokeLinecap="round" strokeDasharray={70} strokeDashoffset={70 * (1 - draw)} />
   </svg>

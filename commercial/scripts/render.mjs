@@ -2,8 +2,8 @@
  * Master-Render mit echter Bewegungsunschärfe.
  *
  * 1. Tonspur synthetisieren
- * 2. Film mit 240 FPS rendern (4 Zwischenbilder pro Frame)
- * 3. Je 4 Zwischenbilder zu einem Frame verrechnen (360°-Shutter) → 60 FPS,
+ * 2. Film mit 180 FPS rendern (3 Zwischenbilder pro Frame)
+ * 3. Je 3 Zwischenbilder zu einem Frame verrechnen (360°-Shutter) → 60 FPS,
  *    feines Filmkorn gegen Banding, Ton anlegen
  *
  *   node scripts/render.mjs            → out/swellora-commercial.mp4
@@ -14,9 +14,9 @@ import { mkdirSync, rmSync } from "node:fs";
 
 const fast = process.argv.includes("--fast");
 const run = (cmd, args) => execFileSync(cmd, args, { stdio: "inherit" });
-const SAMPLES = 4;
+const SAMPLES = 3;
 const out = "out/swellora-commercial.mp4";
-const master = "out/master-240fps.mp4";
+const master = "out/master-180fps.mp4";
 
 mkdirSync("out", { recursive: true });
 run("node", ["--disable-warning=MODULE_TYPELESS_PACKAGE_JSON", "scripts/generate-assets.mts"]);
@@ -29,7 +29,7 @@ if (fast) {
     "-y", "-hide_banner", "-loglevel", "error", "-stats",
     "-i", master,
     "-i", "public/audio/soundtrack.wav",
-    "-vf", `tmix=frames=${SAMPLES}:weights='1 1 1 1',select='not(mod(n+1\\,${SAMPLES}))',setpts=N/60/TB,noise=alls=6:allf=t`,
+    "-vf", `tmix=frames=${SAMPLES}:weights='1 1 1',select='not(mod(n+1\\,${SAMPLES}))',setpts=N/60/TB,noise=alls=6:allf=t`,
     "-r", "60",
     "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
     "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",

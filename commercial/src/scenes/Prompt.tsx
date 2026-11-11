@@ -37,7 +37,7 @@ export const Prompt: React.FC = () => {
             borderRadius: 54,
             transform: `scaleX(${mix(2.6, 1, inP)}) scaleY(${mix(0.2, 1, inP)})`,
             background: "linear-gradient(160deg, rgba(22,30,58,0.62), rgba(6,8,18,0.72))",
-            boxShadow: `0 0 0 2px rgba(150,190,255,${0.5 + press * 0.4}), 0 0 50px rgba(70,120,255,${0.5 + press * 0.4}), 0 0 160px rgba(40,80,255,0.4), inset 0 1px 0 rgba(255,255,255,0.18)`,
+            boxShadow: `0 0 0 2px rgba(150,190,255,${0.5 + press * 0.4}), 0 0 44px rgba(70,120,255,${0.6 + press * 0.4}), inset 0 1px 0 rgba(255,255,255,0.18)`,
           }}
         >
           <div style={{ padding: "66px 62px 0", fontSize: 72, lineHeight: 1.18, fontWeight: 520, letterSpacing: "-0.035em", color: "#fff", textShadow: GLOW_SOFT }}>

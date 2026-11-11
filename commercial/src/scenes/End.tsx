@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { Flare, GLOW } from "../components/Light";
+import { Flare, GLOW, Halo } from "../components/Light";
 import { Cursor, Mark, Spread } from "../components/Type";
 import { E, kf, mix, ramp, useT } from "../lib/motion";
 import { T } from "../timeline";
@@ -34,9 +34,11 @@ export const End: React.FC = () => {
       </div>
 
       <div style={{ position: "absolute", top: 1400, opacity: ramp(t, s.button, s.button + 0.25, E.linear), transform: `translateY(${(1 - btn) * 50}px) scale(${mix(0.86, 1, btn) - press * 0.06})` }}>
+        <Halo w={1100} h={520} power={0.75 + press * 0.25} />
         <div style={{ position: "absolute", inset: -ripple * 70, borderRadius: 100, border: "2px solid rgba(160,195,255,0.9)", opacity: (1 - ripple) * (t >= s.click ? 1 : 0) }} />
         <div
           style={{
+            position: "relative",
             padding: "38px 78px",
             borderRadius: 80,
             background: "linear-gradient(170deg, #ffffff, #cfe0ff)",
@@ -44,7 +46,7 @@ export const End: React.FC = () => {
             fontSize: 46,
             fontWeight: 650,
             letterSpacing: "-0.03em",
-            boxShadow: `0 0 0 2px rgba(255,255,255,0.9), 0 0 ${50 + press * 60}px rgba(120,165,255,${0.8 + press * 0.2}), 0 0 190px rgba(60,110,255,0.7)`,
+            boxShadow: `0 0 0 2px rgba(255,255,255,0.9), 0 0 ${36 + press * 24}px rgba(120,165,255,${0.8 + press * 0.2})`,
           }}
         >
           Jetzt anfragen →

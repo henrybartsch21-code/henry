@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { GLOW } from "../components/Light";
+import { GLOW, Halo } from "../components/Light";
 import { Spread } from "../components/Type";
 import { E, kf, ramp, useT } from "../lib/motion";
 import { T } from "../timeline";
@@ -69,7 +69,7 @@ const designs: Design[] = [
 ];
 
 const Site: React.FC<{ d: Design }> = ({ d }) => (
-  <div style={{ width: W, height: H, borderRadius: 46, overflow: "hidden", background: d.bg, color: d.ink, position: "relative", boxShadow: `0 0 0 2.5px ${d.rim}, 0 0 60px rgba(${d.glow},0.75), 0 0 220px rgba(${d.glow},0.5), inset 0 2px 0 rgba(255,255,255,0.35)` }}>
+  <div style={{ width: W, height: H, borderRadius: 46, overflow: "hidden", background: d.bg, color: d.ink, position: "relative", boxShadow: `0 0 0 2.5px ${d.rim}, 0 0 44px rgba(${d.glow},0.8), inset 0 2px 0 rgba(255,255,255,0.35)` }}>
     <div style={{ position: "absolute", inset: 0, background: d.art }} />
     <div style={{ position: "relative", display: "flex", alignItems: "center", padding: "50px 54px 0", fontSize: 26, color: d.mute }}>
       <span style={{ fontSize: 31, fontWeight: 700, letterSpacing: "-0.02em", color: d.ink }}>{d.brand}</span>
@@ -121,7 +121,8 @@ export const Card: React.FC = () => {
     <AbsoluteFill style={{ opacity: ramp(t, s.in, s.in + 0.2, E.linear) * (1 - ramp(t, s.out + 0.12, s.out + 0.3, E.linear)) }}>
       <AbsoluteFill style={{ perspective: 1700, alignItems: "center", justifyContent: "center" }}>
         <div style={{ transform: `translateY(${y}px) scale(${scale}) rotateX(${rotX}deg) rotateY(${rotY}deg)`, filter: out > 0.05 ? `blur(${out * 24}px)` : undefined }}>
-          <div style={{ transform: back ? "rotateY(180deg)" : undefined }}>
+          <Halo w={1700} h={2000} color={designs[idx].glow} power={0.8} />
+          <div style={{ position: "relative", transform: back ? "rotateY(180deg)" : undefined }}>
             <Site d={designs[idx]} />
           </div>
         </div>

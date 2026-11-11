@@ -6,7 +6,7 @@ Vollständig in Code animiert mit [Remotion](https://www.remotion.dev) (React + 
 | | |
 |---|---|
 | Format | 1080 × 1920 (9:16) |
-| Framerate | 60 FPS, gerendert mit 240 FPS und zu echter Bewegungsunschärfe verrechnet |
+| Framerate | 60 FPS, gerendert mit 180 FPS und zu echter Bewegungsunschärfe verrechnet |
 | Länge | 20 s |
 | Ton | 48 kHz Stereo, prozedural synthetisiert (keine Samples, keine Lizenzen) |
 | Schrift | Inter Variable (lokal gebündelt, SIL Open Font License) |
@@ -47,7 +47,7 @@ src/
   scenes/              Open, Prompt, Code, Card, Offer, End
 scripts/
   generate-assets.mts  Sound Design: Musik, Klicks, Whooshes, Impact, Markensignatur
-  render.mjs           Master-Render (240 FPS → 60 FPS mit Motion Blur, Filmkorn, Ton)
+  render.mjs           Master-Render (180 FPS → 60 FPS mit Motion Blur, Filmkorn, Ton)
 ```
 
 ## Anpassen

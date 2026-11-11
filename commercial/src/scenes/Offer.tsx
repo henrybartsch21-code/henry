@@ -35,7 +35,7 @@ export const Offer: React.FC = () => {
             const size = 2.5 + rnd(i + 0.5) * 7;
             const life = 0.8 + rnd(i + 0.2) * 1.3;
             const o = Math.max(0, 1 - tau / life) * (0.5 + 0.5 * Math.sin(tau * 30 + i));
-            return <div key={i} style={{ position: "absolute", left: x, top: y, width: size, height: size, borderRadius: size, backgroundColor: i % 3 ? "#fff" : ICE, opacity: o, boxShadow: i % 5 === 0 ? "0 0 12px #6aa0ff" : undefined }} />;
+            return <div key={i} style={{ position: "absolute", left: x, top: y, width: size, height: size, borderRadius: size, backgroundColor: i % 3 ? "#fff" : ICE, opacity: o,  }} />;
           })
         : null}
 
@@ -46,7 +46,7 @@ export const Offer: React.FC = () => {
           </div>
           <div style={{ marginTop: 26, textAlign: "center", opacity: ramp(t, s.free, s.free + 0.08, E.linear), transform: `scale(${mix(1.9, 1, hit)})`, filter: hit < 0.98 ? `blur(${(1 - hit) * 22}px)` : undefined }}>
             <div style={{ fontSize: 156, lineHeight: 1, fontWeight: 260, letterSpacing: "-0.05em", textShadow: GLOW }}>100 %</div>
-            <div style={{ fontSize: 210, lineHeight: 1.04, fontWeight: 740, letterSpacing: "-0.062em", textShadow: "0 0 30px rgba(170,205,255,0.8), 0 0 110px rgba(70,120,255,0.75)" }}>kostenlos.</div>
+            <div style={{ fontSize: 210, lineHeight: 1.04, fontWeight: 740, letterSpacing: "-0.062em", textShadow: "0 0 30px rgba(130,175,255,0.85)" }}>kostenlos.</div>
           </div>
           <div style={{ marginTop: 50, fontSize: 50, fontWeight: 460, color: "#c5d6f7", textShadow: GLOW }}>
             <Spread at={s.sub} tracking={-0.025}>Erst sehen. Dann entscheiden.</Spread>

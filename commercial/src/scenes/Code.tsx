@@ -71,7 +71,7 @@ export const Code: React.FC = () => {
         }}
       >
         {src.map((line, i) => (
-          <div key={i} style={{ color: colors[(i * 7 + line.length) % colors.length], textShadow: "0 0 18px rgba(90,140,255,0.8)" }}>
+          <div key={i} style={{ color: colors[(i * 7 + line.length) % colors.length], textShadow: "0 0 10px rgba(90,140,255,0.9)" }}>
             {line || " "}
           </div>
         ))}
