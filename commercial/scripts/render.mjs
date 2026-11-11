@@ -6,7 +6,7 @@
  * 3. Je 3 Zwischenbilder zu einem Frame verrechnen (360°-Shutter) → 60 FPS,
  *    feines Filmkorn gegen Banding, Ton anlegen
  *
- *   node scripts/render.mjs            → out/swellora-commercial.mp4
+ *   node scripts/render.mjs            → out/svelora-commercial.mp4
  *   node scripts/render.mjs --fast     → ohne Motion Blur (schnelle Vorschau)
  */
 import { execFileSync } from "node:child_process";
@@ -15,16 +15,16 @@ import { mkdirSync, rmSync } from "node:fs";
 const fast = process.argv.includes("--fast");
 const run = (cmd, args) => execFileSync(cmd, args, { stdio: "inherit" });
 const SAMPLES = 3;
-const out = "out/swellora-commercial.mp4";
+const out = "out/svelora-commercial.mp4";
 const master = "out/master-180fps.mp4";
 
 mkdirSync("out", { recursive: true });
 run("node", ["--disable-warning=MODULE_TYPELESS_PACKAGE_JSON", "scripts/generate-assets.mts"]);
 
 if (fast) {
-  run("npx", ["remotion", "render", "SwelloraCommercial", out]);
+  run("npx", ["remotion", "render", "SveloraCommercial", out]);
 } else {
-  run("npx", ["remotion", "render", "SwelloraMaster", master, "--muted", "--crf=10"]);
+  run("npx", ["remotion", "render", "SveloraMaster", master, "--muted", "--crf=10"]);
   run("ffmpeg", [
     "-y", "-hide_banner", "-loglevel", "error", "-stats",
     "-i", master,

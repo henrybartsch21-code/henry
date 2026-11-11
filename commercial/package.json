@@ -1,8 +1,8 @@
 {
-  "name": "swellora-commercial",
+  "name": "svelora-commercial",
   "version": "1.0.0",
   "private": true,
-  "description": "SWELLORA — 20s Motion Design Commercial (Remotion, 1080x1920, 60 FPS)",
+  "description": "SVELORA — 20s Motion Design Commercial (Remotion, 1080x1920, 60 FPS)",
   "scripts": {
     "assets": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/generate-assets.mts",
     "studio": "npm run assets && remotion studio",

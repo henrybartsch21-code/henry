@@ -19,7 +19,7 @@ export const Open: React.FC = () => {
           <Mark size={190} draw={ramp(t, s.logo - 0.35, s.logo + 0.55, E.inOut)} style={{ opacity: ramp(t, s.logo - 0.35, s.logo, E.linear), transform: `rotate(${(1 - ramp(t, s.logo - 0.35, s.logo + 0.8, E.out)) * -90}deg)` }} />
           <div style={{ marginTop: 54, fontSize: 104, fontWeight: 600, color: "#fff", textShadow: GLOW }}>
             <Spread at={s.logo} dur={0.8} from={0.9} tracking={0.3} style={{ paddingLeft: "0.3em" }}>
-              SWELLORA
+              SVELORA
             </Spread>
           </div>
         </div>

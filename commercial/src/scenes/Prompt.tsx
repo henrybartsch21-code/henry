@@ -62,7 +62,7 @@ export const Prompt: React.FC = () => {
           </div>
           <div style={{ position: "absolute", left: 62, right: 46, bottom: 44, display: "flex", alignItems: "center", color: "#9aa6c4", fontSize: 34 }}>
             <span style={{ fontSize: 58, fontWeight: 300, color: "#fff", lineHeight: 1 }}>+</span>
-            <span style={{ marginLeft: "auto", marginRight: 30, letterSpacing: "-0.01em" }}>Swellora Studio</span>
+            <span style={{ marginLeft: "auto", marginRight: 30, letterSpacing: "-0.01em" }}>Svelora Studio</span>
             <div
               style={{
                 width: 92,

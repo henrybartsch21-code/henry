@@ -1,4 +1,4 @@
-# SWELLORA — Motion Design Commercial
+# SVELORA — Motion Design Commercial
 
 20-Sekunden-Werbespot für Instagram Reels, TikTok und YouTube Shorts.
 Vollständig in Code animiert mit [Remotion](https://www.remotion.dev) (React + TypeScript).
@@ -16,7 +16,7 @@ Vollständig in Code animiert mit [Remotion](https://www.remotion.dev) (React + 
 ```bash
 cd commercial
 npm install
-npm run render        # Master mit Motion Blur → out/swellora-commercial.mp4
+npm run render        # Master mit Motion Blur → out/svelora-commercial.mp4
 npm run render:fast   # schnelle Vorschau ohne Motion Blur
 ```
 
@@ -27,7 +27,7 @@ Browser verwendet werden: `REMOTION_BROWSER=/pfad/zu/chrome npm run render`.
 
 ## Ablauf
 
-1. **Licht & Marke** — Flutlicht zündet, SWELLORA tritt aus den Lichtbändern
+1. **Licht & Marke** — Flutlicht zündet, SVELORA tritt aus den Lichtbändern
 2. **Der Wunsch** — Prompt wird getippt: „Ich will eine Website, die Kunden gewinnt."
 3. **Code-Rausch** — Speed-Ramp durch den Quelltext
 4. **Die Website** — schwebende Glas-Karte, drei Designs im Flip
@@ -43,7 +43,7 @@ src/
   lib/motion.ts        Easing-Kurven, ramp(), Keyframes
   components/
     Light.tsx          Lichtbänder, Flare, Glow-Werte
-    Type.tsx           Text-Reveal, Swellora-Zeichen, Mauszeiger
+    Type.tsx           Text-Reveal, Svelora-Zeichen, Mauszeiger
   scenes/              Open, Prompt, Code, Card, Offer, End
 scripts/
   generate-assets.mts  Sound Design: Musik, Klicks, Whooshes, Impact, Markensignatur

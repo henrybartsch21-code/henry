@@ -9,8 +9,8 @@ export const SAMPLES = 3;
 export const Root: React.FC = () => (
   <>
     {/* Vorschau / Studio: 60 FPS mit Ton */}
-    <Composition id="SwelloraCommercial" component={Commercial} durationInFrames={DURATION * FPS} fps={FPS} width={WIDTH} height={HEIGHT} />
+    <Composition id="SveloraCommercial" component={Commercial} durationInFrames={DURATION * FPS} fps={FPS} width={WIDTH} height={HEIGHT} />
     {/* Master: 180 FPS, wird von scripts/render.mjs zu 60 FPS mit Motion Blur verrechnet */}
-    <Composition id="SwelloraMaster" component={Commercial} defaultProps={{ withAudio: false }} durationInFrames={DURATION * FPS * SAMPLES} fps={FPS * SAMPLES} width={WIDTH} height={HEIGHT} />
+    <Composition id="SveloraMaster" component={Commercial} defaultProps={{ withAudio: false }} durationInFrames={DURATION * FPS * SAMPLES} fps={FPS * SAMPLES} width={WIDTH} height={HEIGHT} />
   </>
 );

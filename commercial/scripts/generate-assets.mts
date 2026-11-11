@@ -1,5 +1,5 @@
 /**
- * SWELLORA — Sound Design & Asset Generator
+ * SVELORA — Sound Design & Asset Generator
  *
  * Synthetisiert die komplette Tonspur (Musik + Sound-Effekte) prozedural —
  * 100 % eigene Sounds, keine Samples, keine Lizenzen. Alle Einsätze kommen

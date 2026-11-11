@@ -3,7 +3,7 @@ import { AbsoluteFill } from "remotion";
 import { E, kf, ramp, useT } from "../lib/motion";
 import { T } from "../timeline";
 
-const src = `import { Hero, Nav, Section } from "@swellora/ui";
+const src = `import { Hero, Nav, Section } from "@svelora/ui";
 import { motion } from "motion/react";
 
 export default function Startseite() {

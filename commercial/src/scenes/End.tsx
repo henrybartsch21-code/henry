@@ -20,7 +20,7 @@ export const End: React.FC = () => {
         <Mark size={170} draw={ramp(t, s.logo - 0.2, s.logo + 0.7, E.inOut)} style={{ opacity: ramp(t, s.logo - 0.2, s.logo + 0.1, E.linear) }} />
         <div style={{ marginTop: 50, fontSize: 108, fontWeight: 600, textShadow: GLOW }}>
           <Spread at={s.logo} dur={1.0} from={0.9} tracking={0.3} style={{ paddingLeft: "0.3em" }}>
-            SWELLORA
+            SVELORA
           </Spread>
         </div>
         <div style={{ marginTop: 22, fontSize: 46, fontWeight: 420, color: "#c5d6f7", textShadow: GLOW }}>
